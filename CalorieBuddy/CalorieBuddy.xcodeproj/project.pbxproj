@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		436232B828E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436232B628E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld */; };
 		43B997D328DC605D007A431F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B997D228DC605D007A431F /* AppDelegate.swift */; };
 		43B997D528DC605D007A431F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B997D428DC605D007A431F /* SceneDelegate.swift */; };
 		43B997D728DC605D007A431F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B997D628DC605D007A431F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		436232B728E2FD8500B41DB3 /* CalorieBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalorieBuddy.xcdatamodel; sourceTree = "<group>"; };
 		43B997CF28DC605D007A431F /* CalorieBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B997D228DC605D007A431F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B997D428DC605D007A431F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				43B997DB28DC6060007A431F /* Assets.xcassets */,
 				43B997DD28DC6060007A431F /* LaunchScreen.storyboard */,
 				43B997E028DC6060007A431F /* Info.plist */,
+				436232B628E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld */,
 			);
 			path = CalorieBuddy;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436232B828E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */,
 				43B997D728DC605D007A431F /* ViewController.swift in Sources */,
 				43B997D328DC605D007A431F /* AppDelegate.swift in Sources */,
 				43B997D528DC605D007A431F /* SceneDelegate.swift in Sources */,
@@ -358,6 +362,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		436232B628E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				436232B728E2FD8500B41DB3 /* CalorieBuddy.xcdatamodel */,
+			);
+			currentVersion = 436232B728E2FD8500B41DB3 /* CalorieBuddy.xcdatamodel */;
+			path = CalorieBuddy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 43B997C728DC605D007A431F /* Project object */;
 }
