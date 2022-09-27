@@ -9,6 +9,8 @@ import UIKit
 
 class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     @IBOutlet weak var itemImage: UIView!
     @IBOutlet weak var itemsImageView: UIImageView!
     
@@ -24,7 +26,7 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var nutrientLabel4: UILabel!
     
     @IBOutlet weak var picker: UIPickerView!
-    
+    let dp = DataProvider()
     var selectedFood:Hint?
     
     var pickerData = ["Breakfast","Lunch", "Supper"]
@@ -52,6 +54,28 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
 
     @IBAction func saveTapped(_ sender: Any) {
         print(selectedFood!.food.label)
+        
+        let taskName = selectedFood?.food.label
+        
+        let date = datePicker.date
+        let category = selectedCategory
+        
+        let newItem = FoodItem(context: dp.context)
+        
+        newItem.foodName = taskName
+        
+        newItem.calorie = (selectedFood?.food.nutrients.ENERC_KCAL)!
+        newItem.imageString = selectedFood?.food.image
+        
+    
+       // newItem.date = date
+        newItem.category = category
+        do{
+            try dp.context.save()
+           print("Done saving...")
+        }catch{
+          print("error saving")
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

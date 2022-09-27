@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "foodItemCell")
+        
+        dp.getAllItems()
+        print(dp.models.count)
+        
     }
 
     @IBAction func getTapped(_ sender: UIButton) {

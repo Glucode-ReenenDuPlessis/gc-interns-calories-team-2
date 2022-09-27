@@ -171,6 +171,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="390" height="844"/>
                     <connections>
+                        <outlet property="datePicker" destination="Egk-hO-Wqh" id="ERw-yu-0nk"/>
                         <outlet property="itemImage" destination="nfV-6K-nrH" id="nLH-LO-V8r"/>
                         <outlet property="itemName" destination="LGE-ML-sDO" id="0OT-Yl-nMq"/>
                         <outlet property="itemSlider" destination="GTu-Lk-ePa" id="vSW-54-taB"/>
