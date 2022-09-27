@@ -7,25 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		436232B828E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436232B628E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld */; };
 		43B997D328DC605D007A431F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B997D228DC605D007A431F /* AppDelegate.swift */; };
 		43B997D528DC605D007A431F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B997D428DC605D007A431F /* SceneDelegate.swift */; };
-		43B997D728DC605D007A431F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B997D628DC605D007A431F /* ViewController.swift */; };
-		43B997DA28DC605D007A431F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B997D828DC605D007A431F /* Main.storyboard */; };
 		43B997DC28DC6060007A431F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B997DB28DC6060007A431F /* Assets.xcassets */; };
 		43B997DF28DC6060007A431F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B997DD28DC6060007A431F /* LaunchScreen.storyboard */; };
+		5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147F9C28E2F747008008FC /* UIImageView.swift */; };
+		5C147FA128E2F77A008008FC /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C147F9F28E2F77A008008FC /* FoodItemCell.xib */; };
+		5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FA028E2F77A008008FC /* FoodItemCell.swift */; };
+		5C147FA528E2F7A8008008FC /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FA328E2F7A8008008FC /* Food.swift */; };
+		5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FA828E2F7C9008008FC /* DataProvider.swift */; };
+		5C147FAB28E2F900008008FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C147FAA28E2F900008008FC /* Main.storyboard */; };
+		5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAC28E2F935008008FC /* DetailViewController.swift */; };
+		5C147FAF28E2F935008008FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAD28E2F935008008FC /* ViewController.swift */; };
+		5C147FB228E2FA8E008008FC /* CompositionalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FB128E2FA8E008008FC /* CompositionalHelper.swift */; };
+		5C147FB428E2FAA4008008FC /* RecommenedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FB328E2FAA4008008FC /* RecommenedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		436232B728E2FD8500B41DB3 /* CalorieBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalorieBuddy.xcdatamodel; sourceTree = "<group>"; };
 		43B997CF28DC605D007A431F /* CalorieBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B997D228DC605D007A431F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B997D428DC605D007A431F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		43B997D628DC605D007A431F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		43B997D928DC605D007A431F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43B997DB28DC6060007A431F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43B997DE28DC6060007A431F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43B997E028DC6060007A431F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C147F9C28E2F747008008FC /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		5C147F9F28E2F77A008008FC /* FoodItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemCell.xib; sourceTree = "<group>"; };
+		5C147FA028E2F77A008008FC /* FoodItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
+		5C147FA328E2F7A8008008FC /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		5C147FA828E2F7C9008008FC /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		5C147FAA28E2F900008008FC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5C147FAC28E2F935008008FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5C147FAD28E2F935008008FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C147FB128E2FA8E008008FC /* CompositionalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionalHelper.swift; sourceTree = "<group>"; };
+		5C147FB328E2FAA4008008FC /* RecommenedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommenedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +72,47 @@
 		43B997D128DC605D007A431F /* CalorieBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				5C147F9E28E2F753008008FC /* Extensions */,
 				43B997D228DC605D007A431F /* AppDelegate.swift */,
 				43B997D428DC605D007A431F /* SceneDelegate.swift */,
-				43B997D628DC605D007A431F /* ViewController.swift */,
-				43B997D828DC605D007A431F /* Main.storyboard */,
+				5C147FB028E2F971008008FC /* Controller */,
+				5C147FA728E2F7B8008008FC /* Model */,
 				43B997DB28DC6060007A431F /* Assets.xcassets */,
+				5C147FAA28E2F900008008FC /* Main.storyboard */,
 				43B997DD28DC6060007A431F /* LaunchScreen.storyboard */,
 				43B997E028DC6060007A431F /* Info.plist */,
-				436232B628E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld */,
 			);
 			path = CalorieBuddy;
+			sourceTree = "<group>";
+		};
+		5C147F9E28E2F753008008FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5C147FB128E2FA8E008008FC /* CompositionalHelper.swift */,
+				5C147F9C28E2F747008008FC /* UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5C147FA728E2F7B8008008FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C147FA828E2F7C9008008FC /* DataProvider.swift */,
+				5C147FA328E2F7A8008008FC /* Food.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C147FB028E2F971008008FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C147FAC28E2F935008008FC /* DetailViewController.swift */,
+				5C147FAD28E2F935008008FC /* ViewController.swift */,
+				5C147FA028E2F77A008008FC /* FoodItemCell.swift */,
+				5C147F9F28E2F77A008008FC /* FoodItemCell.xib */,
+				5C147FB328E2FAA4008008FC /* RecommenedViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +173,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C147FA128E2F77A008008FC /* FoodItemCell.xib in Resources */,
 				43B997DF28DC6060007A431F /* LaunchScreen.storyboard in Resources */,
 				43B997DC28DC6060007A431F /* Assets.xcassets in Resources */,
-				43B997DA28DC605D007A431F /* Main.storyboard in Resources */,
+				5C147FAB28E2F900008008FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +187,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				436232B828E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */,
-				43B997D728DC605D007A431F /* ViewController.swift in Sources */,
+				5C147FB228E2FA8E008008FC /* CompositionalHelper.swift in Sources */,
+				5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */,
+				5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */,
+				5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */,
 				43B997D328DC605D007A431F /* AppDelegate.swift in Sources */,
+				5C147FB428E2FAA4008008FC /* RecommenedViewController.swift in Sources */,
 				43B997D528DC605D007A431F /* SceneDelegate.swift in Sources */,
+				5C147FA528E2F7A8008008FC /* Food.swift in Sources */,
+				5C147FAF28E2F935008008FC /* ViewController.swift in Sources */,
+				5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		43B997D828DC605D007A431F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43B997D928DC605D007A431F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		43B997DD28DC6060007A431F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,19 +406,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		436232B628E2FD8500B41DB3 /* CalorieBuddy.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				436232B728E2FD8500B41DB3 /* CalorieBuddy.xcdatamodel */,
-			);
-			currentVersion = 436232B728E2FD8500B41DB3 /* CalorieBuddy.xcdatamodel */;
-			path = CalorieBuddy.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 43B997C728DC605D007A431F /* Project object */;
 }
