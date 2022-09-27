@@ -22,8 +22,10 @@ class ViewController: UIViewController {
         
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "foodItemCell")
         
+       
+        
         dp.getAllItems()
-        print(dp.models.count)
+        
         
     }
 

@@ -68,7 +68,7 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         newItem.imageString = selectedFood?.food.image
         
     
-       // newItem.date = date
+        newItem.date = date
         newItem.category = category
         do{
             try dp.context.save()
