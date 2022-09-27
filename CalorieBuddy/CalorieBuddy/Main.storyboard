@@ -12,7 +12,7 @@
         <!--Detail View Controller-->
         <scene sceneID="HiG-Is-zb0">
             <objects>
-                <viewController id="DMW-gq-JJa" customClass="DetailViewController" customModule="SampleAPICall" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DMW-gq-JJa" customClass="DetailViewController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UdN-ao-Fnc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,6 +179,7 @@
                         <outlet property="nutrientLabel2" destination="SMl-2M-FaO" id="yL6-j1-1AZ"/>
                         <outlet property="nutrientLabel3" destination="qR9-Sk-qXA" id="fjD-wH-pAt"/>
                         <outlet property="nutrientLabel4" destination="34U-C2-x4v" id="bK7-hb-9wQ"/>
+                        <outlet property="picker" destination="Jgu-yK-hxW" id="OuK-Qj-UvZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysF-BR-htV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -188,7 +189,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleAPICall" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,7 +241,7 @@
         <!--Recommened View Controller-->
         <scene sceneID="j57-0e-Qcw">
             <objects>
-                <viewController id="QqC-su-csI" customClass="RecommenedViewController" customModule="SampleAPICall" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QqC-su-csI" customClass="RecommenedViewController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M8T-za-7vS">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +256,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BaseCollectionViewCell" id="uon-ML-Mvd" customClass="BaseCollectionViewCell" customModule="SampleAPICall" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BaseCollectionViewCell" id="uon-ML-Mvd" customClass="BaseCollectionViewCell" customModule="CalorieBuddy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="21" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qdX-Z3-x4S">
@@ -277,7 +278,7 @@
                                             <outlet property="cellImage" destination="4ZU-Tn-cUk" id="ZLg-Tg-HGd"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="PlanCollectionViewCell" id="hKq-XF-YyK" customClass="PlanCollectionViewCell" customModule="SampleAPICall" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="PlanCollectionViewCell" id="hKq-XF-YyK" customClass="PlanCollectionViewCell" customModule="CalorieBuddy" customModuleProvider="target">
                                         <rect key="frame" x="138" y="0.0" width="171" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9cp-yE-AHN">
