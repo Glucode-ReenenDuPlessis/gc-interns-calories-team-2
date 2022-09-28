@@ -19,6 +19,7 @@ class ViewController: UIViewController {
        
         tableView.delegate = self
         tableView.dataSource = self
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "foodItemCell")
     }
