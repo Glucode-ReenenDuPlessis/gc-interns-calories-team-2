@@ -25,7 +25,8 @@ class ViewController: UIViewController {
        
         
         dp.getAllItems()
-        
+        print(dp.models.count)
+//        print(dp.models[3].imageString)
         
     }
 

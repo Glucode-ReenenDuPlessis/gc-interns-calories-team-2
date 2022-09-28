@@ -18,13 +18,11 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var itemName: UILabel!
     
 
-    @IBOutlet weak var nutrientLabel2: UILabel!
+   
     
     @IBOutlet weak var nutrientLabel1: UILabel!
     
-    @IBOutlet weak var nutrientLabel3: UILabel!
-    
-    @IBOutlet weak var nutrientLabel4: UILabel!
+   
     
     @IBOutlet weak var picker: UIPickerView!
     let dp = DataProvider()
@@ -40,17 +38,15 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         if selectedFood?.food.image != nil{
-//            itemsImageView.downloaded(from:(selectedFood?.food.image!)!)
+//           itemsImageView.downloaded(from:(selectedFood?.food.image!)!)
             itemsImageView.loadImage(fromURL: selectedFood?.food.image! ?? "")
         } else{
-            itemsImageView.image = UIImage(systemName: "questionmark")
+            itemsImageView.image = UIImage(named: "restaurant.png")
         }
        
         itemName.text = selectedFood?.food.label
         nutrientLabel1.text = "Calorie: \(selectedFood!.food.nutrients.ENERC_KCAL )"
-        nutrientLabel2.text = "\(selectedFood!.food.nutrients.procnt ?? 0.00)"
-        nutrientLabel3.text = "\(selectedFood!.food.nutrients.chocdf ?? 0.00)"
-        nutrientLabel4.text = "\(selectedFood!.food.nutrients.fat ?? 0.00)"
+       
         servings = 1
         servingsLabel.text = "\(servings!)"
         self.picker.delegate = self
