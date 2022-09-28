@@ -11,17 +11,19 @@ import SwiftUI
 
 class StatsViewController: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
     fileprivate let cellId = "cellId"
+    fileprivate let collectionId = "collectionId"
     fileprivate let padding: CGFloat = 16
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.showsVerticalScrollIndicator = false
         collectionView?.showsHorizontalScrollIndicator = false
-
+//        addChild(collector)
 //        collectionView.backgroundColor = .systemYellow
+        collectionView?.register(DatePickerViewCell.self, forCellWithReuseIdentifier: collectionId)
     }
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -39,10 +41,16 @@ class StatsViewController: UICollectionViewController ,UICollectionViewDelegateF
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = .black
-        
-        return cell
+        if indexPath.item == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionId, for: indexPath)
+            
+            return cell
+        }else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+            cell.backgroundColor = .black
+            
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
