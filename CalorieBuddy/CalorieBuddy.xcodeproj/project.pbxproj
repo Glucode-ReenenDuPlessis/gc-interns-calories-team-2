@@ -20,8 +20,8 @@
 		5C147FAB28E2F900008008FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C147FAA28E2F900008008FC /* Main.storyboard */; };
 		5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAC28E2F935008008FC /* DetailViewController.swift */; };
 		5C147FAF28E2F935008008FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAD28E2F935008008FC /* ViewController.swift */; };
-		5C147FB228E2FA8E008008FC /* CompositionalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FB128E2FA8E008008FC /* CompositionalHelper.swift */; };
-		5C147FB428E2FAA4008008FC /* RecommenedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FB328E2FAA4008008FC /* RecommenedViewController.swift */; };
+		5CF7C19628E429FD00B84361 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19528E429FD00B84361 /* ProfileViewController.swift */; };
+		5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +40,8 @@
 		5C147FAA28E2F900008008FC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5C147FAC28E2F935008008FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5C147FAD28E2F935008008FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5C147FB128E2FA8E008008FC /* CompositionalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionalHelper.swift; sourceTree = "<group>"; };
-		5C147FB328E2FAA4008008FC /* RecommenedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommenedViewController.swift; sourceTree = "<group>"; };
+		5CF7C19528E429FD00B84361 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,6 @@
 		5C147F9E28E2F753008008FC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5C147FB128E2FA8E008008FC /* CompositionalHelper.swift */,
 				5C147F9C28E2F747008008FC /* UIImageView.swift */,
 			);
 			path = Extensions;
@@ -102,6 +101,7 @@
 			children = (
 				5C147FA828E2F7C9008008FC /* DataProvider.swift */,
 				5C147FA328E2F7A8008008FC /* Food.swift */,
+				5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,7 +113,7 @@
 				5C147FAD28E2F935008008FC /* ViewController.swift */,
 				5C147FA028E2F77A008008FC /* FoodItemCell.swift */,
 				5C147F9F28E2F77A008008FC /* FoodItemCell.xib */,
-				5C147FB328E2FAA4008008FC /* RecommenedViewController.swift */,
+				5CF7C19528E429FD00B84361 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,15 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C147FB228E2FA8E008008FC /* CompositionalHelper.swift in Sources */,
 				5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */,
 				5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */,
 				5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */,
 				43B997D328DC605D007A431F /* AppDelegate.swift in Sources */,
-				5C147FB428E2FAA4008008FC /* RecommenedViewController.swift in Sources */,
+				5CF7C19628E429FD00B84361 /* ProfileViewController.swift in Sources */,
 				436232BB28E2FE7100B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */,
 				43B997D528DC605D007A431F /* SceneDelegate.swift in Sources */,
 				5C147FA528E2F7A8008008FC /* Food.swift in Sources */,
+				5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */,
 				5C147FAF28E2F935008008FC /* ViewController.swift in Sources */,
 				5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */,
 			);
