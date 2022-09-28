@@ -11,12 +11,13 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
 
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var servingsLabel: UILabel!
     @IBOutlet weak var itemImage: UIView!
     @IBOutlet weak var itemsImageView: UIImageView!
     
     @IBOutlet weak var itemName: UILabel!
     
-    @IBOutlet weak var itemSlider: UISlider!
+
     @IBOutlet weak var nutrientLabel2: UILabel!
     
     @IBOutlet weak var nutrientLabel1: UILabel!
@@ -32,6 +33,9 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     var pickerData = ["Breakfast","Lunch", "Supper"]
     var selectedCategory: String?
     
+    var servings:Double?
+    
+    var calories:Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +47,12 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         }
        
         itemName.text = selectedFood?.food.label
-        nutrientLabel1.text = "Energy: \(selectedFood!.food.nutrients.ENERC_KCAL )"
+        nutrientLabel1.text = "Calorie: \(selectedFood!.food.nutrients.ENERC_KCAL )"
         nutrientLabel2.text = "\(selectedFood!.food.nutrients.procnt ?? 0.00)"
         nutrientLabel3.text = "\(selectedFood!.food.nutrients.chocdf ?? 0.00)"
         nutrientLabel4.text = "\(selectedFood!.food.nutrients.fat ?? 0.00)"
+        servings = 1
+        servingsLabel.text = "\(servings!)"
         self.picker.delegate = self
         self.picker.dataSource = self
     }
@@ -56,6 +62,7 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         print(selectedFood!.food.label)
         
         let taskName = selectedFood?.food.label
+        calories = selectedFood!.food.nutrients.ENERC_KCAL * servings!
         
         let date = datePicker.date
         let category = selectedCategory
@@ -64,7 +71,7 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         
         newItem.foodName = taskName
         
-        newItem.calorie = (selectedFood?.food.nutrients.ENERC_KCAL)!
+        newItem.calorie = calories!
         newItem.imageString = selectedFood?.food.image
         
     
@@ -91,5 +98,24 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedCategory = pickerData[row]
+    }
+    
+    
+    
+    @IBAction func minusTapped(_ sender: Any) {
+        servings! -= 0.5
+        servingsLabel.text = "\(servings!)"
+        calories = selectedFood!.food.nutrients.ENERC_KCAL * servings!
+        nutrientLabel1.text = "Calories: \(calories!)"
+        
+    }
+    
+    
+    
+    @IBAction func plusTapped(_ sender: Any) {
+        servings! += 0.5
+        servingsLabel.text = "\(servings!)"
+        calories = selectedFood!.food.nutrients.ENERC_KCAL * servings!
+        nutrientLabel1.text = "Calories: \(calories!)"
     }
 }
