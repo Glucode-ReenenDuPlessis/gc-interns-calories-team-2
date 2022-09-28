@@ -12,6 +12,7 @@
 		43B997D528DC605D007A431F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B997D428DC605D007A431F /* SceneDelegate.swift */; };
 		43B997DC28DC6060007A431F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B997DB28DC6060007A431F /* Assets.xcassets */; };
 		43B997DF28DC6060007A431F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B997DD28DC6060007A431F /* LaunchScreen.storyboard */; };
+		43EF6C6728E42CF200914C44 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF6C6628E42CF200914C44 /* StatsViewController.swift */; };
 		5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147F9C28E2F747008008FC /* UIImageView.swift */; };
 		5C147FA128E2F77A008008FC /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C147F9F28E2F77A008008FC /* FoodItemCell.xib */; };
 		5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FA028E2F77A008008FC /* FoodItemCell.swift */; };
@@ -32,6 +33,7 @@
 		43B997DB28DC6060007A431F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43B997DE28DC6060007A431F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43B997E028DC6060007A431F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43EF6C6628E42CF200914C44 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		5C147F9C28E2F747008008FC /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		5C147F9F28E2F77A008008FC /* FoodItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemCell.xib; sourceTree = "<group>"; };
 		5C147FA028E2F77A008008FC /* FoodItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		43B997D128DC605D007A431F /* CalorieBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				43EF6C6428E42CDA00914C44 /* Views */,
 				436232B928E2FE7000B41DB3 /* CalorieBuddy.xcdatamodeld */,
 				5C147F9E28E2F753008008FC /* Extensions */,
 				43B997D228DC605D007A431F /* AppDelegate.swift */,
@@ -86,6 +89,22 @@
 				43B997E028DC6060007A431F /* Info.plist */,
 			);
 			path = CalorieBuddy;
+			sourceTree = "<group>";
+		};
+		43EF6C6428E42CDA00914C44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43EF6C6528E42CDF00914C44 /* Stats */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		43EF6C6528E42CDF00914C44 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				43EF6C6628E42CF200914C44 /* StatsViewController.swift */,
+			);
+			path = Stats;
 			sourceTree = "<group>";
 		};
 		5C147F9E28E2F753008008FC /* Extensions */ = {
@@ -200,6 +219,7 @@
 				5C147FA528E2F7A8008008FC /* Food.swift in Sources */,
 				5C147FAF28E2F935008008FC /* ViewController.swift in Sources */,
 				5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */,
+				43EF6C6728E42CF200914C44 /* StatsViewController.swift in Sources */,
 				B873FCA128E34D4B00A3FE4E /* FoodItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
