@@ -7,4 +7,19 @@
         <attribute name="foodName" optional="YES" attributeType="String"/>
         <attribute name="imageString" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Meal" representedClassName="Meal" syncable="YES" codeGenerationType="class">
+        <attribute name="mealCalory" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="mealName" attributeType="String"/>
+        <relationship name="users" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="meals" inverseEntity="User"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="caloryLimit" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="idealUserWeight" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="userAge" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="userGender" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="userHeight" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="userName" attributeType="String"/>
+        <attribute name="userWeight" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="meals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Meal" inverseName="users" inverseEntity="Meal"/>
+    </entity>
 </model>

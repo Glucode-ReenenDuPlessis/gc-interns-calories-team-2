@@ -40,7 +40,7 @@ class FoodItemCell: UITableViewCell {
             //            foodImg.downloaded(from:pic!)
             foodImageView.loadImage(fromURL: pic!)
         } else{
-            foodImageView.image = UIImage(systemName: "questionmark")
+            foodImageView.image = UIImage(named: "restaurant.png")
         }
     }
     
