@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "foodItemCell")
+        
+       
+        
+        dp.getAllItems()
+     
+        
     }
 
     @IBAction func getTapped(_ sender: UIButton) {

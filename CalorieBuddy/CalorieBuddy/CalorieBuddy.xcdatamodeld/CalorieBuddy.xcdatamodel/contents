@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FoodItem" representedClassName="FoodItem" syncable="YES">
+        <attribute name="calorie" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="foodName" optional="YES" attributeType="String"/>
+        <attribute name="imageString" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Meal" representedClassName="Meal" syncable="YES" codeGenerationType="class">
         <attribute name="mealCalory" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="mealName" attributeType="String"/>
