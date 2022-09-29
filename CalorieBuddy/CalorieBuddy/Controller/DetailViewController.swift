@@ -51,6 +51,12 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         servingsLabel.text = "\(servings!)"
         self.picker.delegate = self
         self.picker.dataSource = self
+        
+        itemsImageView.layer.borderWidth = 1
+           itemsImageView.layer.masksToBounds = false
+           itemsImageView.layer.borderColor = UIColor.black.cgColor
+           itemsImageView.layer.cornerRadius = itemsImageView.frame.height/4
+           itemsImageView.clipsToBounds = true
     }
     
 
