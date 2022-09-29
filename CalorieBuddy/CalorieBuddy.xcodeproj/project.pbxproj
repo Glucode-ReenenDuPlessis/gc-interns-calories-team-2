@@ -26,6 +26,8 @@
 		5CF7C19628E429FD00B84361 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19528E429FD00B84361 /* ProfileViewController.swift */; };
 		5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */; };
 		5CF7C19A28E4672A00B84361 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19928E4672A00B84361 /* EditViewController.swift */; };
+		B873FCA028E34D4B00A3FE4E /* FoodItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873FC9E28E34D4B00A3FE4E /* FoodItem+CoreDataClass.swift */; };
+		B873FCA128E34D4B00A3FE4E /* FoodItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873FC9F28E34D4B00A3FE4E /* FoodItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		5CF7C19528E429FD00B84361 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 		5CF7C19928E4672A00B84361 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		B873FC9E28E34D4B00A3FE4E /* FoodItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B873FC9F28E34D4B00A3FE4E /* FoodItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 		5C147FA728E2F7B8008008FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B873FC9E28E34D4B00A3FE4E /* FoodItem+CoreDataClass.swift */,
+				B873FC9F28E34D4B00A3FE4E /* FoodItem+CoreDataProperties.swift */,
 				5C147FA828E2F7C9008008FC /* DataProvider.swift */,
 				5C147FA328E2F7A8008008FC /* Food.swift */,
 				5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */,
@@ -211,12 +217,14 @@
 				436232BB28E2FE7100B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */,
 				5C37854A28E5A360005AB827 /* RecommendedCollectionViewCell.swift in Sources */,
 				43B997D528DC605D007A431F /* SceneDelegate.swift in Sources */,
+				B873FCA028E34D4B00A3FE4E /* FoodItem+CoreDataClass.swift in Sources */,
 				5C37854128E5797F005AB827 /* RecommendedViewController.swift in Sources */,
 				5C147FA528E2F7A8008008FC /* Food.swift in Sources */,
 				5CF7C19A28E4672A00B84361 /* EditViewController.swift in Sources */,
 				5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */,
 				5C147FAF28E2F935008008FC /* ViewController.swift in Sources */,
 				5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */,
+				B873FCA128E34D4B00A3FE4E /* FoodItem+CoreDataProperties.swift in Sources */
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
