@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController {
     
 
     @IBAction func addInfoPressed(_ sender: UIButton) {
-        
 
         dbh.addUser(userName: "OP", userAge: "25", userHeight: "120", userWeight: "67.7", userLimit: "1200", idealWeight: "60", gender: true)
         

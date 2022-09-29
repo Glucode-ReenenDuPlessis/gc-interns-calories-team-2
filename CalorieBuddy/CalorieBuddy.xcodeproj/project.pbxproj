@@ -20,9 +20,8 @@
 		5C147FAB28E2F900008008FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C147FAA28E2F900008008FC /* Main.storyboard */; };
 		5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAC28E2F935008008FC /* DetailViewController.swift */; };
 		5C147FAF28E2F935008008FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAD28E2F935008008FC /* ViewController.swift */; };
-		5C37853D28E571A8005AB827 /* ExplorerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C37853C28E571A8005AB827 /* ExplorerView.xib */; };
-		5C37853F28E57344005AB827 /* ExplorerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37853E28E57344005AB827 /* ExplorerView.swift */; };
 		5C37854128E5797F005AB827 /* RecommendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37854028E5797F005AB827 /* RecommendedViewController.swift */; };
+		5C37854A28E5A360005AB827 /* RecommendedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37854928E5A360005AB827 /* RecommendedCollectionViewCell.swift */; };
 		5CF7C19628E429FD00B84361 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19528E429FD00B84361 /* ProfileViewController.swift */; };
 		5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */; };
 		5CF7C19A28E4672A00B84361 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19928E4672A00B84361 /* EditViewController.swift */; };
@@ -44,9 +43,8 @@
 		5C147FAA28E2F900008008FC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5C147FAC28E2F935008008FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5C147FAD28E2F935008008FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5C37853C28E571A8005AB827 /* ExplorerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExplorerView.xib; sourceTree = "<group>"; };
-		5C37853E28E57344005AB827 /* ExplorerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerView.swift; sourceTree = "<group>"; };
 		5C37854028E5797F005AB827 /* RecommendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewController.swift; sourceTree = "<group>"; };
+		5C37854928E5A360005AB827 /* RecommendedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCollectionViewCell.swift; sourceTree = "<group>"; };
 		5CF7C19528E429FD00B84361 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 		5CF7C19928E4672A00B84361 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
@@ -123,9 +121,8 @@
 				5C147F9F28E2F77A008008FC /* FoodItemCell.xib */,
 				5CF7C19528E429FD00B84361 /* ProfileViewController.swift */,
 				5CF7C19928E4672A00B84361 /* EditViewController.swift */,
-				5C37853C28E571A8005AB827 /* ExplorerView.xib */,
-				5C37853E28E57344005AB827 /* ExplorerView.swift */,
 				5C37854028E5797F005AB827 /* RecommendedViewController.swift */,
+				5C37854928E5A360005AB827 /* RecommendedCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,7 +185,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C37853D28E571A8005AB827 /* ExplorerView.xib in Resources */,
 				5C147FA128E2F77A008008FC /* FoodItemCell.xib in Resources */,
 				43B997DF28DC6060007A431F /* LaunchScreen.storyboard in Resources */,
 				43B997DC28DC6060007A431F /* Assets.xcassets in Resources */,
@@ -205,11 +201,11 @@
 			files = (
 				5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */,
 				5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */,
-				5C37853F28E57344005AB827 /* ExplorerView.swift in Sources */,
 				5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */,
 				43B997D328DC605D007A431F /* AppDelegate.swift in Sources */,
 				5CF7C19628E429FD00B84361 /* ProfileViewController.swift in Sources */,
 				436232BB28E2FE7100B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */,
+				5C37854A28E5A360005AB827 /* RecommendedCollectionViewCell.swift in Sources */,
 				43B997D528DC605D007A431F /* SceneDelegate.swift in Sources */,
 				5C37854128E5797F005AB827 /* RecommendedViewController.swift in Sources */,
 				5C147FA528E2F7A8008008FC /* Food.swift in Sources */,
