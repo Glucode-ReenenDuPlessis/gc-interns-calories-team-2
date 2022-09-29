@@ -37,7 +37,7 @@ class DatabaseHandler {
         }
     }
     
-    func addUser(userName: String, userAge: String, userHeight: String, userWeight: String, userLimit: String) {
+    func addUser(userName: String, userAge: String, userHeight: String, userWeight: String, userLimit: String, idealWeight: String, gender: Bool) {
         
         let newUser = User(context: context)
         
@@ -45,12 +45,15 @@ class DatabaseHandler {
         let heightDouble = Double(userHeight)!
         let weightDouble = Double(userWeight)!
         let limitDouble = Double(userLimit)!
+        let idealWeightDouble = Double(idealWeight)!
 
         newUser.userName = userName
         newUser.userAge = ageInt
         newUser.userHeight = heightDouble
         newUser.userWeight = weightDouble
         newUser.caloryLimit = limitDouble
+        newUser.idealUserWeight = idealWeightDouble
+        newUser.userGender = gender
 
         saveData()
         print("Saved successfully")
