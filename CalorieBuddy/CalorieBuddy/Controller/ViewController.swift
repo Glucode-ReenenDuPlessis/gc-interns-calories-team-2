@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         
         dp.getAllItems()
      
-        
+        print(dp.models.count)
     }
 
     @IBAction func getTapped(_ sender: UIButton) {
