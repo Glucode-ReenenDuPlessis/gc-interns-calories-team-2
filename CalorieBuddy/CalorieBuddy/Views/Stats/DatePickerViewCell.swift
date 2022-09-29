@@ -9,9 +9,9 @@ import UIKit
 
 class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     let cellID = "cell"
-    
-    //    var appsCollectionView : UICollectionView?
-    
+    var totalSquares = [Date]()
+    var selectedDate = Date()
+        
     var appsCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -23,6 +23,7 @@ class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UIC
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
+        setWeekView()
         
     }
     required init?(coder: NSCoder) {
@@ -30,46 +31,78 @@ class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UIC
     }
     
     func setupViews(){
-        backgroundColor = .systemRed
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        //        layout.itemSize = CGSize(width: 150, height:  200)
-        appsCollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height), collectionViewLayout: layout)
+        let flowLayout = appsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flowLayout.scrollDirection = .horizontal
+        appsCollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height), collectionViewLayout: flowLayout)
         appsCollectionView.delegate = self
         appsCollectionView.dataSource = self
+        appsCollectionView.isPagingEnabled = true
+        appsCollectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
         appsCollectionView.register(AppCell.self, forCellWithReuseIdentifier: "cell")
         addSubview(appsCollectionView)
-        //
-        //        appsCollectionView.delegate = self
-        //        appsCollectionView.dataSource = self
-        //        appsCollectionView.register(AppCell.self, forCellWithReuseIdentifier: cellID)
-        //
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        
+
     }
     
+    func setWeekView()
+    {
+        totalSquares.removeAll()
+        
+        var current = CalendarHelper().sundayForDate(date: selectedDate)
+        let nextSunday = CalendarHelper().addDays(date: current, days: 7)
+        
+        while (current < nextSunday)
+        {
+            totalSquares.append(current)
+            current = CalendarHelper().addDays(date: current, days: 1)
+        }
+        
+    }
+
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        totalSquares.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! AppCell
+        let date = totalSquares[indexPath.item]
+        cell.numberTextView.text = String(CalendarHelper().dayOfMonth(date: date))
+        cell.layer.cornerRadius = 20
+        cell.backgroundColor = .systemGray
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: frame.width/2, height: frame.height)
+        let width = (appsCollectionView.frame.size.width - 2) / 8.45
+        let height = (appsCollectionView.frame.size.height - 2) / 2
+        return CGSize(width: width, height: height)
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        selectedDate = totalSquares[indexPath.item]
+        print("\(selectedDate)")
+        
+    }
     
 }
 
 class AppCell: UICollectionViewCell {
+    
+     let numberTextView: UILabel = {
+        let textView = UILabel()
+        let attributedText = NSMutableAttributedString(string: "\(1)",attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15)])
+        textView.attributedText = attributedText
+        textView.textColor = .white
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.textAlignment = .center
+        return textView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .red
+        setupViews()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -77,6 +110,11 @@ class AppCell: UICollectionViewCell {
     }
     
     func setupViews(){
-        backgroundColor = .red
+        addSubview(numberTextView)
+        NSLayoutConstraint.activate([
+            numberTextView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            numberTextView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+        
     }
 }

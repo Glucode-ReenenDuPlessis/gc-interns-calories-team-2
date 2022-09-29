@@ -14,6 +14,7 @@ class StatsViewController: UICollectionViewController ,UICollectionViewDelegateF
     fileprivate let collectionId = "collectionId"
     fileprivate let padding: CGFloat = 16
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +22,8 @@ class StatsViewController: UICollectionViewController ,UICollectionViewDelegateF
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.showsVerticalScrollIndicator = false
         collectionView?.showsHorizontalScrollIndicator = false
-//        addChild(collector)
-//        collectionView.backgroundColor = .systemYellow
         collectionView?.register(DatePickerViewCell.self, forCellWithReuseIdentifier: collectionId)
+        setupBackgroundView()
     }
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -35,6 +35,27 @@ class StatsViewController: UICollectionViewController ,UICollectionViewDelegateF
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setupBackgroundView(){
+        let BGView = UIView()
+        BGView.translatesAutoresizingMaskIntoConstraints = false
+        BGView.backgroundColor = .secondarySystemFill
+        BGView.layer.cornerRadius = 20
+//        BGView.frame = CGRect(x: 0, y: 0, width: 400, height: 300)
+        collectionView.addSubview(BGView)
+        BGView.layer.zPosition = -1
+
+        BGView.isUserInteractionEnabled = false
+        
+        
+        NSLayoutConstraint.activate([
+            BGView.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor,constant: 5),
+            BGView.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor),
+            BGView.topAnchor.constraint(equalTo: collectionView.topAnchor,constant: 10),
+            BGView.heightAnchor.constraint(equalToConstant: 120),
+            BGView.widthAnchor.constraint(equalTo: collectionView.widthAnchor,constant: -10)
+        
+        ])
+    }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -42,6 +63,7 @@ class StatsViewController: UICollectionViewController ,UICollectionViewDelegateF
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 0 {
+ 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionId, for: indexPath)
             
             return cell
