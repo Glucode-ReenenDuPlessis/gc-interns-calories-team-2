@@ -23,6 +23,8 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+       // dbh.addUser(userName: "Sbu", userAge: "27", userHeight: "170", userWeight: "90", userLimit: "1399", gender: true)
     }
     
 
