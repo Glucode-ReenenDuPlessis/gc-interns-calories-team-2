@@ -78,13 +78,12 @@ class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UIC
         let height = (appsCollectionView.frame.size.height - 2) / 2
         return CGSize(width: width, height: height)
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-    {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedDate = totalSquares[indexPath.item]
         print("\(selectedDate)")
         
     }
-    
 }
 
 class AppCell: UICollectionViewCell {
