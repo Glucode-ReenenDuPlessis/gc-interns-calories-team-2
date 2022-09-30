@@ -11,7 +11,9 @@ import SwiftUI
 
 class StatsViewController: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
     fileprivate let cellId = "cellId"
+    fileprivate let baseId = "baseId"
     fileprivate let collectionId = "collectionId"
+    fileprivate let foodItemId = "foodItemId"
     fileprivate let nuttritionId = "nuttritionId"
     fileprivate let padding: CGFloat = 16
     
@@ -62,8 +64,7 @@ class StatsViewController: UICollectionViewController ,UICollectionViewDelegateF
      
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        trackLayer.frame = .init(x: 100, y: 110, width: 20, height: 20)
-        shapeLayer.frame = .init(x: 100, y: 110, width: 20, height: 20)
+
     }
 }
 
@@ -72,61 +73,14 @@ extension StatsViewController{
     func configureCollectionView(){
         view.backgroundColor = .white
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(BaseCell.self, forCellWithReuseIdentifier: baseId)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(DatePickerViewCell.self, forCellWithReuseIdentifier: collectionId)
         collectionView.register(NutritionViewCell.self, forCellWithReuseIdentifier: nuttritionId)
-        setupProgressBar()
+        collectionView.register(FoodItemViewCell.self, forCellWithReuseIdentifier: foodItemId)
     }
     
-    func setupProgressBar(){
-      
-        
-        let center = collectionView.center
-        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -CGFloat.pi/2, endAngle: CGFloat.pi*2, clockwise: true)
-        trackLayer.path = circularPath.cgPath
-        
-        //add stroke to the circle
-        trackLayer.strokeColor = UIColor.lightGray.cgColor
-        trackLayer.lineWidth = 10
-        trackLayer.fillColor = UIColor.clear.cgColor
-        //line cap
-        
-
-        
-        //path needed to draw the shape layer (for shape layer)
-        shapeLayer.path = circularPath.cgPath
-        
-        //add stroke to the circle
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 10
-        shapeLayer.strokeEnd = 0
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        //line cap
-        shapeLayer.lineCap = CAShapeLayerLineCap.round
-        
-        
-        
-        
-        
-        
-        
-        
-        //tap gesture
-//        greenView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
-    }
-    //tap gesture function
-    @objc
-    func handleTap(){
-        //key path is the thing you want to animate
-        //using it animate the key path
-        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        basicAnimation.duration = 2
-        basicAnimation.toValue = 0.6
-        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
-        basicAnimation.isRemovedOnCompletion = false
-        shapeLayer.add(basicAnimation, forKey: "basicAnim")
-    }
 }
  
 
@@ -160,15 +114,16 @@ extension StatsViewController{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionId, for: indexPath)
             return cell
         }else if indexPath.item == 1{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-            cell.layer.addSublayer(trackLayer)
-            cell.layer.addSublayer(shapeLayer)
-            cell.layer.cornerRadius = 20
-            cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: baseId, for: indexPath) as! BaseCell
+            cell.numberTextView.text = "Nutrition Budget"
             return cell
-        }else{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-            cell.backgroundColor = .black
+        }else if indexPath.item == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: nuttritionId, for: indexPath) as! NutritionViewCell
+            return cell
+        }
+        else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: foodItemId, for: indexPath) as! FoodItemViewCell
+            
             return cell
         }
     }
@@ -176,9 +131,45 @@ extension StatsViewController{
         if indexPath.item == 0{
             return .init(width: view.frame.width - 2 * padding, height: 150)
         }else if indexPath.item == 1{
+            return .init(width: view.frame.width - 2 * padding, height: 50)
+        }else if indexPath.item == 2{
             return .init(width: view.frame.width - 2 * padding, height: 250)
         }else{
             return .init(width: view.frame.width - 2 * padding, height: 100)
         }
+    }
+}
+
+
+class BaseCell: UICollectionViewCell {
+    
+     var numberTextView: UILabel = {
+         var textView = UILabel()
+         var attributedText = NSMutableAttributedString(string: "\(1)",attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)])
+        textView.attributedText = attributedText
+        textView.textColor = .black
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.textAlignment = .left
+        return textView
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupViews(){
+        addSubview(numberTextView)
+        NSLayoutConstraint.activate([
+            numberTextView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            numberTextView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            numberTextView.leadingAnchor.constraint(equalTo: leadingAnchor)
+        ])
+        
     }
 }

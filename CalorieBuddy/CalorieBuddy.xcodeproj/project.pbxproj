@@ -10,6 +10,8 @@
 		22909CA728E5B74300CB418A /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22909CA628E5B74300CB418A /* PracticeViewController.swift */; };
 		435EBBB628E4C8CE004A7296 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBB528E4C8CE004A7296 /* CalendarHelper.swift */; };
 		435EBBD828E591FB004A7296 /* NutritionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBD728E591FB004A7296 /* NutritionViewCell.swift */; };
+		435EBBDA28E6D104004A7296 /* FoodItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBD928E6D104004A7296 /* FoodItemViewCell.swift */; };
+		435EBBDC28E6D225004A7296 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBDB28E6D225004A7296 /* Extensions.swift */; };
 		436232BB28E2FE7100B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436232B928E2FE7000B41DB3 /* CalorieBuddy.xcdatamodeld */; };
 		437DAC2228E4554E0034D810 /* DatePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DAC2128E4554E0034D810 /* DatePickerViewCell.swift */; };
 		43B997D328DC605D007A431F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B997D228DC605D007A431F /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 		22909CA628E5B74300CB418A /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		435EBBB528E4C8CE004A7296 /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		435EBBD728E591FB004A7296 /* NutritionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewCell.swift; sourceTree = "<group>"; };
+		435EBBD928E6D104004A7296 /* FoodItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemViewCell.swift; sourceTree = "<group>"; };
+		435EBBDB28E6D225004A7296 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		436232BA28E2FE7100B41DB3 /* CalorieBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalorieBuddy.xcdatamodel; sourceTree = "<group>"; };
 		437DAC2128E4554E0034D810 /* DatePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewCell.swift; sourceTree = "<group>"; };
 		43B997CF28DC605D007A431F /* CalorieBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +127,7 @@
 				435EBBD728E591FB004A7296 /* NutritionViewCell.swift */,
 				43EF6C6628E42CF200914C44 /* StatsViewController.swift */,
 				437DAC2128E4554E0034D810 /* DatePickerViewCell.swift */,
+				435EBBD928E6D104004A7296 /* FoodItemViewCell.swift */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			children = (
 				435EBBB528E4C8CE004A7296 /* CalendarHelper.swift */,
 				5C147F9C28E2F747008008FC /* UIImageView.swift */,
+				435EBBDB28E6D225004A7296 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,7 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435EBBDC28E6D225004A7296 /* Extensions.swift in Sources */,
 				435EBBD828E591FB004A7296 /* NutritionViewCell.swift in Sources */,
+				435EBBDA28E6D104004A7296 /* FoodItemViewCell.swift in Sources */,
 				5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */,
 				5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */,
 				5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */,
