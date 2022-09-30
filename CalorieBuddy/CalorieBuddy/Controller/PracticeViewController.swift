@@ -26,7 +26,7 @@ class PracticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dbh.addUser(userName: name.text!, userAge: age.text!, userHeight: height.text!, userWeight: weight.text!, userLimit: limit.text!, idealWeight: idealWeight.text!, gender: true)
     }
     
 

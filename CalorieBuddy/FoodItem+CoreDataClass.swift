@@ -2,7 +2,7 @@
 //  FoodItem+CoreDataClass.swift
 //  CalorieBuddy
 //
-//  Created by Sthembiso Ndhlazi on 2022/09/27.
+//  Created by Sibusiso Mbonani on 2022/09/30.
 //
 //
 
