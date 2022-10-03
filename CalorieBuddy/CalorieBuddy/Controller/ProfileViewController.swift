@@ -10,17 +10,32 @@ import CoreData
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var age: UITextField!
-    @IBOutlet weak var height: UITextField!
-    @IBOutlet weak var weight: UITextField!
-    @IBOutlet weak var limit: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var idealWeightLabel: UILabel!
+    @IBOutlet weak var limitLabel: UILabel!
+    
+    
+    var finalName = ""
+    var finalWeight = ""
+    var finalHeight = ""
+    var ID = ""
+    var finalLimit = ""
+    
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let dbh = DatabaseHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameLabel.text = finalName
+        weightLabel.text = finalWeight
+        heightLabel.text = finalHeight
+        idealWeightLabel.text = ID
+        limitLabel.text = finalLimit
+        
 
         // Do any additional setup after loading the view.
         
@@ -29,8 +44,10 @@ class ProfileViewController: UIViewController {
     
 
     @IBAction func addInfoPressed(_ sender: UIButton) {
-
-        dbh.addUser(userName: "OP", userAge: "25", userHeight: "120", userWeight: "67.7", userLimit: "1200", idealWeight: "60", gender: true)
+        
+        //        dbh.addUser(userName: "OP", userAge: "25", userHeight: "120", userWeight: "67.7", userLimit: "1200", idealWeight: "60", gender: true)
+        
+        
         
     }
 
