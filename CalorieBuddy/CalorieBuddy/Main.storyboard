@@ -628,12 +628,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="80" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QUN-2q-yoi">
-                                <rect key="frame" x="148" y="476" width="86" height="34"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psK-VY-mdp">
+                                <rect key="frame" x="101" y="465" width="180" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6AJ-Uw-y0w"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -643,7 +642,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="age" destination="I2u-LO-V4v" id="3eO-zP-B5O"/>
-                        <outlet property="height" destination="QUN-2q-yoi" id="gw6-IE-wB4"/>
+                        <outlet property="heightViewContainer" destination="psK-VY-mdp" id="FBa-pj-ZgP"/>
                         <outlet property="idealWeight" destination="ZhK-dK-n6c" id="lGh-Jr-RY5"/>
                         <outlet property="limit" destination="wdh-YJ-Yek" id="vRc-Z2-V1T"/>
                         <outlet property="name" destination="wGQ-W6-SSi" id="VjK-Xz-If9"/>
@@ -657,7 +656,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rj8-xF-QVm"/>
         <segue reference="Eyd-bb-29c"/>
     </inferredMetricsTieBreakers>
     <resources>

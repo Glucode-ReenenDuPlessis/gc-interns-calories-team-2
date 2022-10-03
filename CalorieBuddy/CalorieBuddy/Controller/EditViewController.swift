@@ -24,7 +24,7 @@ class EditViewController: UIViewController {
     let dbh = DatabaseHandler()
     
     var nameText = ""
-    var weightText = ""
+    var weightText: UITextField?
     var heightText = ""
     var idealWeightText = ""
     var limitText = ""
@@ -35,13 +35,34 @@ class EditViewController: UIViewController {
        editUser()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        addNumberField()
+    }
+    
+    func addNumberField() {
+        let bundle = Bundle.main
+        
+        guard let heightView = bundle.loadNibNamed("EditNumberFieldView", owner: self)?.first as? EditNumberFieldView
+                
+        else {
+            return
+        }
+        
+        heightView.titleLabel.text = "Height"
+        weightText = heightView.userInputField
+        self.heightViewContainer.addSubview(heightView)
+        heightView.pinEdges(to: self.heightViewContainer)
+        
+    }
+
+    
     func editUser() {
         let user = dbh.getUserInfo()
         
         for user in user {
             name.text = user.userName
             age.text = String(user.userAge)
-            height.text = String(user.userHeight)
+//            height.text = String(user.userHeight)
             weight.text = String(user.userWeight)
             limit.text = String(user.caloryLimit)
             idealWeight.text = String(user.idealUserWeight)
@@ -51,16 +72,17 @@ class EditViewController: UIViewController {
 
 
     @IBAction func CalculatePressed(_ sender: UIButton) {
-        dbh.editUser(userAge: age.text!, userHeight: height.text!, userWeight: weight.text!, userLimit: limit.text!)
         
-      self.nameText = name.text!
-      self.weightText = weight.text!
-      self.heightText = height.text!
-      self.idealWeightText = idealWeight.text!
-      self.limitText = limit.text!
-        
-        performSegue(withIdentifier: "showDetail", sender: self)
-    
+        print(weightText?.text ?? "No text")
+//        dbh.editUser(userAge: age.text!, userHeight: height.text!, userWeight: weight.text!, userLimit: limit.text!)
+//
+//      self.nameText = name.text!
+//      self.weightText = weight.text!
+//      self.heightText = height.text!
+//      self.idealWeightText = idealWeight.text!
+//      self.limitText = limit.text!
+//
+//        performSegue(withIdentifier: "showDetail", sender: self)
         
         
         
@@ -75,7 +97,7 @@ class EditViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ProfileViewController
      vc.finalName = self.nameText
-    vc.finalWeight = self.weightText
+//    vc.finalWeight = self.weightText
         vc.finalHeight = self.heightText
         vc.ID = self.idealWeightText
         vc.finalLimit = self.limitText
