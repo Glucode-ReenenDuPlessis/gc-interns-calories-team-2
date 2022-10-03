@@ -14,6 +14,9 @@ class EditViewController: UIViewController {
     @IBOutlet weak var limitViewContainer: UIView!
     @IBOutlet weak var ageViewContainer: UIView!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var height: UITextField!
@@ -25,9 +28,9 @@ class EditViewController: UIViewController {
     
     var nameText = ""
     var weightText: UITextField?
-    var heightText = ""
-    var idealWeightText = ""
-    var limitText = ""
+    var heightText: UITextField?
+    var limitText:UITextField?
+    var ageText: UITextField?
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,9 @@ class EditViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         addNumberField()
+        addNumberField1()
+        addNumberField2()
+        addNumberField3()
     }
     
     func addNumberField() {
@@ -49,9 +55,53 @@ class EditViewController: UIViewController {
         }
         
         heightView.titleLabel.text = "Height"
-        weightText = heightView.userInputField
+        heightText = heightView.userInputField
         self.heightViewContainer.addSubview(heightView)
         heightView.pinEdges(to: self.heightViewContainer)
+        
+    }
+    
+    func addNumberField1() {
+        let bundle = Bundle.main
+        
+        guard let weightView = bundle.loadNibNamed("EditNumberFieldView", owner: self)?.first as? EditNumberFieldView
+        else {
+            return
+        }
+
+        weightView.titleLabel.text = "Weight"
+        weightText = weightView.userInputField
+        self.weightViewContainer.addSubview(weightView)
+        weightView.pinEdges(to: self.weightViewContainer)
+    }
+    
+    func addNumberField2() {
+        let bundle = Bundle.main
+        
+        guard let limitView = bundle.loadNibNamed("EditNumberFieldView", owner: self)?.first as? EditNumberFieldView
+        else {
+            return
+        }
+        
+        limitView.titleLabel.text = "Limit"
+        limitText = limitView.userInputField
+        self.limitViewContainer.addSubview(limitView)
+        limitView.pinEdges(to: self.limitViewContainer)
+        
+    }
+    
+    func addNumberField3() {
+        let bundle = Bundle.main
+        
+        guard let ageView = bundle.loadNibNamed("EditNumberFieldView", owner: self)?.first as? EditNumberFieldView
+        else {
+            return
+        }
+        
+        ageView.titleLabel.text = "Age"
+        ageText = ageView.userInputField
+        self.ageViewContainer.addSubview(ageView)
+        ageView.pinEdges(to: self.ageViewContainer)
         
     }
 
@@ -60,12 +110,12 @@ class EditViewController: UIViewController {
         let user = dbh.getUserInfo()
         
         for user in user {
-            name.text = user.userName
-            age.text = String(user.userAge)
+            nameLabel.text = user.userName
+//            age.text = String(user.userAge)
 //            height.text = String(user.userHeight)
-            weight.text = String(user.userWeight)
-            limit.text = String(user.caloryLimit)
-            idealWeight.text = String(user.idealUserWeight)
+//            weight.text = String(user.userWeight)
+//            limit.text = String(user.caloryLimit)
+//            idealWeight.text = String(user.idealUserWeight)
         }
         
     }
@@ -73,7 +123,10 @@ class EditViewController: UIViewController {
 
     @IBAction func CalculatePressed(_ sender: UIButton) {
         
+        print(heightText?.text ?? "No text")
         print(weightText?.text ?? "No text")
+        print(limitText?.text ?? "No text")
+        print(ageText?.text ?? "No text")
 //        dbh.editUser(userAge: age.text!, userHeight: height.text!, userWeight: weight.text!, userLimit: limit.text!)
 //
 //      self.nameText = name.text!
@@ -96,11 +149,11 @@ class EditViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ProfileViewController
-     vc.finalName = self.nameText
+//     vc.finalName = self.nameText
 //    vc.finalWeight = self.weightText
-        vc.finalHeight = self.heightText
-        vc.ID = self.idealWeightText
-        vc.finalLimit = self.limitText
+//        vc.finalHeight = self.heightText
+//        vc.ID = self.idealWeightText
+//        vc.finalLimit = self.limitText
     
     
     }
