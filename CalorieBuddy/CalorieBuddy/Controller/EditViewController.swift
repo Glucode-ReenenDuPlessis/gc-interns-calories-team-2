@@ -16,6 +16,7 @@ class EditViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var age: UITextField!
@@ -31,11 +32,18 @@ class EditViewController: UIViewController {
     var heightText: UITextField?
     var limitText:UITextField?
     var ageText: UITextField?
+    
+    var users: [User] {
+        let data = dbh.getUserInfo()
+        return data
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
         
        editUser()
+        profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
+        profileImage.clipsToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +63,10 @@ class EditViewController: UIViewController {
         }
         
         heightView.titleLabel.text = "Height"
+        for user in users {
+            heightView.userInputField.text = String(user.userWeight)
+        }
+        
         heightText = heightView.userInputField
         self.heightViewContainer.addSubview(heightView)
         heightView.pinEdges(to: self.heightViewContainer)

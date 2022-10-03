@@ -600,6 +600,7 @@
                         <outlet property="heightViewContainer" destination="psK-VY-mdp" id="FBa-pj-ZgP"/>
                         <outlet property="limitViewContainer" destination="rMX-sW-Yy0" id="SnQ-QJ-34l"/>
                         <outlet property="nameLabel" destination="WD7-Pl-Muw" id="6BY-q5-TKf"/>
+                        <outlet property="profileImage" destination="Jvb-bg-oG2" id="keP-eW-2dk"/>
                         <outlet property="weightViewContainer" destination="6XC-9j-1Mk" id="52J-Fd-5h0"/>
                         <segue destination="CIl-Dx-Gwc" kind="presentation" identifier="showDetail" id="Eyd-bb-29c"/>
                     </connections>
