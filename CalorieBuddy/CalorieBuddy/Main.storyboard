@@ -564,8 +564,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VIS-Y4-MwW">
-                                <rect key="frame" x="30" y="348" width="330" height="70"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-jC-Nfh">
+                                <rect key="frame" x="98" y="330" width="190" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1v-Yq-QmR">
+                                <rect key="frame" x="101" y="416" width="190" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubr-8w-S51">
+                                <rect key="frame" x="98" y="517" width="190" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sae-S8-5yF">
+                                <rect key="frame" x="98" y="605" width="190" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </view>
@@ -577,7 +592,10 @@
                         <barButtonItem key="rightBarButtonItem" title="Save" id="dC3-Mo-rfp"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="heightViewContainer" destination="VIS-Y4-MwW" id="97B-Ml-jtt"/>
+                        <outlet property="ageViewContainer" destination="t1v-Yq-QmR" id="ju1-HI-Wj6"/>
+                        <outlet property="heightViewContainer" destination="Y7C-jC-Nfh" id="9sn-k1-j5K"/>
+                        <outlet property="limitViewContainer" destination="Sae-S8-5yF" id="2m0-Mj-QEN"/>
+                        <outlet property="weightViewContainer" destination="ubr-8w-S51" id="INb-2z-zZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KmS-3l-RAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

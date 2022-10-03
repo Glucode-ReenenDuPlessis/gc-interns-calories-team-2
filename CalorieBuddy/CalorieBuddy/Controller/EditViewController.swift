@@ -10,19 +10,16 @@ import UIKit
 class EditViewController: UIViewController {
     
     @IBOutlet weak var heightViewContainer: UIView!
+    @IBOutlet weak var weightViewContainer: UIView!
+    @IBOutlet weak var limitViewContainer: UIView!
+    @IBOutlet weak var ageViewContainer: UIView!
     
     @IBOutlet weak var name: UITextField!
-    
     @IBOutlet weak var age: UITextField!
-    
     @IBOutlet weak var height: UITextField!
-    
     @IBOutlet weak var weight: UITextField!
-    
     @IBOutlet weak var limit: UITextField!
-    
     @IBOutlet weak var idealWeight: UITextField!
-    
     
     let dbh = DatabaseHandler()
 
@@ -30,10 +27,6 @@ class EditViewController: UIViewController {
         super.viewDidLoad()
         
 //        setUpView()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        addEditTextView()
     }
     
     func setUpView() {
@@ -50,19 +43,10 @@ class EditViewController: UIViewController {
         
     }
     
-    func addEditTextView() {
-        let bundle = Bundle.main
-        
-        guard let heightView = bundle.loadNibNamed("EditTextFieldView", owner: self)?.first as? EditTextFieldView else {
-            return
-        }
-        
-        self.heightViewContainer.addSubview(heightView)
-        heightView.pinEdges(to: self.heightViewContainer)
-    }
-
+    
 
     @IBAction func CalculatePressed(_ sender: UIButton) {
+        print(age.text!)
 //        dbh.editUser(userAge: age.text!, userHeight: height.text!, userWeight: weight.text!, userLimit: limit.text!)
     }
     
