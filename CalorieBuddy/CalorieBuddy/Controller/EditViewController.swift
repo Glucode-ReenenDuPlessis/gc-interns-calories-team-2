@@ -64,7 +64,7 @@ class EditViewController: UIViewController {
         
         heightView.titleLabel.text = "Height"
         for user in users {
-            heightView.userInputField.text = String(user.userWeight)
+            heightView.userInputField.text = String(user.userHeight)
         }
         
         heightText = heightView.userInputField
@@ -80,6 +80,11 @@ class EditViewController: UIViewController {
         else {
             return
         }
+        
+        weightView.titleLabel.text = "Height"
+        for user in users {
+            weightView.userInputField.text = String(user.userWeight)
+        }
 
         weightView.titleLabel.text = "Weight"
         weightText = weightView.userInputField
@@ -93,6 +98,11 @@ class EditViewController: UIViewController {
         guard let limitView = bundle.loadNibNamed("EditNumberFieldView", owner: self)?.first as? EditNumberFieldView
         else {
             return
+        }
+        
+        limitView.titleLabel.text = "Height"
+        for user in users {
+            limitView.userInputField.text = String(user.caloryLimit)
         }
         
         limitView.titleLabel.text = "Limit"
@@ -110,6 +120,11 @@ class EditViewController: UIViewController {
             return
         }
         
+        ageView.titleLabel.text = "Height"
+        for user in users {
+            ageView.userInputField.text = String(user.userAge)
+        }
+        
         ageView.titleLabel.text = "Age"
         ageText = ageView.userInputField
         self.ageViewContainer.addSubview(ageView)
@@ -123,11 +138,6 @@ class EditViewController: UIViewController {
         
         for user in user {
             nameLabel.text = user.userName
-//            age.text = String(user.userAge)
-//            height.text = String(user.userHeight)
-//            weight.text = String(user.userWeight)
-//            limit.text = String(user.caloryLimit)
-//            idealWeight.text = String(user.idealUserWeight)
         }
         
     }
@@ -159,8 +169,8 @@ class EditViewController: UIViewController {
        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ProfileViewController
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vc = segue.destination as! ProfileViewController
 //     vc.finalName = self.nameText
 //    vc.finalWeight = self.weightText
 //        vc.finalHeight = self.heightText
@@ -168,7 +178,7 @@ class EditViewController: UIViewController {
 //        vc.finalLimit = self.limitText
     
     
-    }
+//    }
     
 
 }
