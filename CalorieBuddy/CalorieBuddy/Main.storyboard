@@ -473,6 +473,8 @@
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j1D-Tw-aeu">
                                 <rect key="frame" x="15" y="577" width="360" height="4"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor"/>
+                                <color key="trackTintColor" systemColor="systemRedColor"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e00-uo-VBv">
                                 <rect key="frame" x="15" y="610.66666666666663" width="69" height="20.333333333333371"/>
@@ -488,6 +490,8 @@
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V4b-Ma-uLL">
                                 <rect key="frame" x="15" y="667" width="390" height="4"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor"/>
+                                <color key="trackTintColor" systemColor="systemRedColor"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUB-qn-HdZ">
                                 <rect key="frame" x="91" y="271" width="42" height="21"/>
@@ -530,10 +534,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dayProgress" destination="j1D-Tw-aeu" id="bgr-y1-1mH"/>
                         <outlet property="heightLabel" destination="1Zg-UJ-DCx" id="J4U-7Q-I33"/>
                         <outlet property="idealWeightLabel" destination="kA2-Y3-4xK" id="Qre-40-ylL"/>
                         <outlet property="limitLabel" destination="y8l-Ax-cVP" id="9E7-ts-NpZ"/>
                         <outlet property="nameLabel" destination="GUB-qn-HdZ" id="XYj-99-6qA"/>
+                        <outlet property="weekProgress" destination="V4b-Ma-uLL" id="vyY-Si-x37"/>
                         <outlet property="weightLabel" destination="UcX-7G-Xdw" id="TtR-rM-Sz1"/>
                     </connections>
                 </viewController>
@@ -657,7 +663,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rj8-xF-QVm"/>
         <segue reference="Eyd-bb-29c"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -669,6 +674,12 @@
         <image name="scalemass" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
