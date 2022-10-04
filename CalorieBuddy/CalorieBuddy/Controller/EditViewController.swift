@@ -149,7 +149,7 @@ class EditViewController: UIViewController {
         print(weightText?.text ?? "No text")
         print(limitText?.text ?? "No text")
         print(ageText?.text ?? "No text")
-//        dbh.editUser(userAge: age.text!, userHeight: height.text!, userWeight: weight.text!, userLimit: limit.text!)
+        dbh.editUser(userAge: ageText!.text!, userHeight: heightText!.text!, userWeight: weightText!.text!, userLimit: limitText!.text!)
 //
 //      self.nameText = name.text!
 //      self.weightText = weight.text!

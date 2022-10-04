@@ -16,13 +16,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var idealWeightLabel: UILabel!
     @IBOutlet weak var limitLabel: UILabel!
     
-    
     var finalName = ""
     var finalWeight = ""
     var finalHeight = ""
     var ID = ""
     var finalLimit = ""
     
+    var users: [User] {
+        let data = dbh.getUserInfo()
+        return data
+    }
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let dbh = DatabaseHandler()
@@ -30,24 +33,33 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = finalName
-        weightLabel.text = finalWeight
-        heightLabel.text = finalHeight
-        idealWeightLabel.text = ID
-        limitLabel.text = finalLimit
+//        nameLabel.text = finalName
+//        weightLabel.text = finalWeight
+//        heightLabel.text = finalHeight
+//        idealWeightLabel.text = ID
+//        limitLabel.text = finalLimit
+        setUpView()
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        users = dbh.getUserInfo()
+//    }
+    
+    func setUpView() {
         
-
-        // Do any additional setup after loading the view.
-        
-       // dbh.addUser(userName: "Sbu", userAge: "27", userHeight: "170", userWeight: "90", userLimit: "1399", gender: true)
+        for user in users {
+            nameLabel.text = user.userName
+            weightLabel.text = String(user.userWeight)
+            heightLabel.text = String(user.userHeight)
+            idealWeightLabel.text = String(user.idealUserWeight)
+            limitLabel.text = String(user.caloryLimit)
+            
+        }
     }
     
 
     @IBAction func addInfoPressed(_ sender: UIButton) {
-        
-        //        dbh.addUser(userName: "OP", userAge: "25", userHeight: "120", userWeight: "67.7", userLimit: "1200", idealWeight: "60", gender: true)
-        
-        
+       
         
     }
 
