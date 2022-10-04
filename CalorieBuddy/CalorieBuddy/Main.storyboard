@@ -445,7 +445,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xiq-ek-eQ6">
                                 <rect key="frame" x="20" y="400" width="350" height="102.33333333333331"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-DM-UPa">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-DM-UPa">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="52"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scalemass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UE2-ZU-sap">
@@ -466,7 +466,7 @@
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Msl-Rs-XaI">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Msl-Rs-XaI">
                                         <rect key="frame" x="0.0" y="82" width="350" height="20.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcX-7G-Xdw">
@@ -502,8 +502,11 @@
                                     <constraint firstItem="Msl-Rs-XaI" firstAttribute="leading" secondItem="xiq-ek-eQ6" secondAttribute="leading" id="oYN-zt-7pK"/>
                                 </constraints>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j1D-Tw-aeu">
-                                <rect key="frame" x="15" y="577" width="360" height="4"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j1D-Tw-aeu">
+                                <rect key="frame" x="15" y="600" width="360" height="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="zs7-sG-8vL"/>
+                                </constraints>
                                 <color key="progressTintColor" systemColor="systemGreenColor"/>
                                 <color key="trackTintColor" systemColor="systemRedColor"/>
                             </progressView>
@@ -520,7 +523,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V4b-Ma-uLL">
-                                <rect key="frame" x="15" y="667" width="390" height="4"/>
+                                <rect key="frame" x="15" y="690" width="360" height="4"/>
                                 <color key="progressTintColor" systemColor="systemGreenColor"/>
                                 <color key="trackTintColor" systemColor="systemRedColor"/>
                             </progressView>
@@ -531,10 +534,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzZ-xN-UfP">
+                                <rect key="frame" x="277" y="732" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="CIl-Dx-Gwc" eventType="touchUpInside" id="Y4u-38-xgy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="amL-JO-l0X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="amL-JO-l0X" firstAttribute="trailing" secondItem="V4b-Ma-uLL" secondAttribute="trailing" constant="15" id="0lu-m2-FL6"/>
                             <constraint firstItem="PHl-Eb-A3Z" firstAttribute="leading" secondItem="amL-JO-l0X" secondAttribute="leading" constant="26" id="3WD-XQ-sVs"/>
                             <constraint firstItem="j1D-Tw-aeu" firstAttribute="leading" secondItem="amL-JO-l0X" secondAttribute="leading" constant="15" id="64b-al-lxK"/>
                             <constraint firstItem="amL-JO-l0X" firstAttribute="bottom" secondItem="e00-uo-VBv" secondAttribute="bottom" constant="156" id="7m3-ZE-F8F"/>
@@ -549,7 +562,6 @@
                             <constraint firstItem="amL-JO-l0X" firstAttribute="trailing" secondItem="jWb-9d-34v" secondAttribute="trailing" constant="306" id="g6Q-QK-cl8"/>
                             <constraint firstItem="e00-uo-VBv" firstAttribute="leading" secondItem="amL-JO-l0X" secondAttribute="leading" constant="15" id="h3h-lE-psj"/>
                             <constraint firstItem="amL-JO-l0X" firstAttribute="trailing" secondItem="j1D-Tw-aeu" secondAttribute="trailing" constant="15" id="mII-Rx-wkS"/>
-                            <constraint firstItem="V4b-Ma-uLL" firstAttribute="trailing" secondItem="amL-JO-l0X" secondAttribute="trailing" constant="15" id="oAt-bj-2ln"/>
                             <constraint firstItem="jWb-9d-34v" firstAttribute="leading" secondItem="amL-JO-l0X" secondAttribute="leading" constant="15" id="rbM-6j-iAR"/>
                             <constraint firstItem="amL-JO-l0X" firstAttribute="trailing" secondItem="PHl-Eb-A3Z" secondAttribute="trailing" constant="192" id="sI6-OL-zSl"/>
                             <constraint firstItem="amL-JO-l0X" firstAttribute="bottom" secondItem="V4b-Ma-uLL" secondAttribute="bottom" constant="116" id="ugD-6o-Hd2"/>

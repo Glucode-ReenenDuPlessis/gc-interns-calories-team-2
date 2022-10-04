@@ -27,7 +27,9 @@ class ProfileViewController: UIViewController {
     var finalWeight = ""
     var finalHeight = ""
     var ID = ""
-    var finalLimit = ""
+    var finalLimit: Double = 0.0
+    var userCaloryLimit = Double()
+    var dailyAmount: Double = 800
     
     var users: [User] {
         let data = dbh.getUserInfo()
@@ -39,7 +41,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
+//        self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
         
 //        nameLabel.text = finalName
 //        weightLabel.text = finalWeight
@@ -47,6 +49,7 @@ class ProfileViewController: UIViewController {
 //        idealWeightLabel.text = ID
 //        limitLabel.text = finalLimit
         setUpView()
+        setUpProgress()
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -56,6 +59,8 @@ class ProfileViewController: UIViewController {
     func setUpView() {
         
         for user in users {
+            userCaloryLimit = user.caloryLimit
+            
             nameLabel.text = user.userName
             weightLabel.text = String(user.userWeight)
             heightLabel.text = String(user.userHeight)
@@ -74,14 +79,26 @@ class ProfileViewController: UIViewController {
 //
 //    }
     
-    @objc func setUpProgress(){
-        progressValue = progressValue + 0.01
-        self.dayProgress.progress = Float(progressValue)
-        if progressValue != 1.0 {
-           self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
-            
-            
-        }
+//    @objc func setUpProgress(){
+//        progressValue = progressValue + 0.01
+//        self.dayProgress.progress = Float(progressValue)
+//        if progressValue != 1.0 {
+//           self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
+//
+//
+//        }
+//    }
+    
+    func setUpProgress() {
+        let progressAmount = (dailyAmount / userCaloryLimit)
+        let b = Float(progressAmount)
+        print(b)
+        dayProgress.progress = b
     }
-
+    
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        
+    }
+    
 }
