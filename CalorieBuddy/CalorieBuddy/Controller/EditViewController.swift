@@ -33,6 +33,7 @@ class EditViewController: UIViewController {
     var limitText:UITextField?
     var ageText: UITextField?
     
+    
     var users: [User] {
         let data = dbh.getUserInfo()
         return data
@@ -51,6 +52,7 @@ class EditViewController: UIViewController {
         addNumberField1()
         addNumberField2()
         addNumberField3()
+        
     }
     
     func addNumberField() {
@@ -131,7 +133,7 @@ class EditViewController: UIViewController {
         ageView.pinEdges(to: self.ageViewContainer)
         
     }
-
+    
     
     func editUser() {
         let user = dbh.getUserInfo()
@@ -157,7 +159,7 @@ class EditViewController: UIViewController {
 //      self.idealWeightText = idealWeight.text!
 //      self.limitText = limit.text!
 //
-//        performSegue(withIdentifier: "showDetail", sender: self)
+//      *  performSegue(withIdentifier: "showDetail", sender: self)
         
         
         
