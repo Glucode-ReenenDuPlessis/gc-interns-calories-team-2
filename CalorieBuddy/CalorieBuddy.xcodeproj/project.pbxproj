@@ -66,6 +66,8 @@
 		5CF7C19928E4672A00B84361 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		B873FC9E28E34D4B00A3FE4E /* FoodItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B873FC9F28E34D4B00A3FE4E /* FoodItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CF00296F28EC654B004C0033 /* DetailViewComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewComponent.xib; sourceTree = "<group>"; };
+		CF00297028EC654B004C0033 /* DetailViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				43EF6C6428E42CDA00914C44 /* Views */,
 				436232B928E2FE7000B41DB3 /* CalorieBuddy.xcdatamodeld */,
+				CF00296E28EC654B004C0033 /* Detail View */,
 				5C147F9E28E2F753008008FC /* Extensions */,
 				43B997D228DC605D007A431F /* AppDelegate.swift */,
 				43B997D428DC605D007A431F /* SceneDelegate.swift */,
@@ -168,6 +171,15 @@
 				22909CA628E5B74300CB418A /* PracticeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF00296E28EC654B004C0033 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				CF00296F28EC654B004C0033 /* DetailViewComponent.xib */,
+				CF00297028EC654B004C0033 /* DetailViewComponent.swift */,
+			);
+			path = "Detail View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
