@@ -511,8 +511,8 @@
                                 <color key="trackTintColor" systemColor="systemRedColor"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e00-uo-VBv">
-                                <rect key="frame" x="15" y="633.66666666666663" width="69" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="15" y="636" width="360" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -548,6 +548,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="amL-JO-l0X" firstAttribute="trailing" secondItem="V4b-Ma-uLL" secondAttribute="trailing" constant="15" id="0lu-m2-FL6"/>
+                            <constraint firstItem="amL-JO-l0X" firstAttribute="trailing" secondItem="e00-uo-VBv" secondAttribute="trailing" constant="15" id="0qM-zC-gxn"/>
                             <constraint firstItem="PHl-Eb-A3Z" firstAttribute="leading" secondItem="amL-JO-l0X" secondAttribute="leading" constant="26" id="3WD-XQ-sVs"/>
                             <constraint firstItem="j1D-Tw-aeu" firstAttribute="leading" secondItem="amL-JO-l0X" secondAttribute="leading" constant="15" id="64b-al-lxK"/>
                             <constraint firstItem="amL-JO-l0X" firstAttribute="bottom" secondItem="e00-uo-VBv" secondAttribute="bottom" constant="156" id="7m3-ZE-F8F"/>
@@ -565,7 +566,6 @@
                             <constraint firstItem="jWb-9d-34v" firstAttribute="leading" secondItem="amL-JO-l0X" secondAttribute="leading" constant="15" id="rbM-6j-iAR"/>
                             <constraint firstItem="amL-JO-l0X" firstAttribute="trailing" secondItem="PHl-Eb-A3Z" secondAttribute="trailing" constant="192" id="sI6-OL-zSl"/>
                             <constraint firstItem="amL-JO-l0X" firstAttribute="bottom" secondItem="V4b-Ma-uLL" secondAttribute="bottom" constant="116" id="ugD-6o-Hd2"/>
-                            <constraint firstItem="amL-JO-l0X" firstAttribute="trailing" secondItem="e00-uo-VBv" secondAttribute="trailing" constant="306" id="wYL-ti-ab5"/>
                             <constraint firstItem="amL-JO-l0X" firstAttribute="bottom" secondItem="xiq-ek-eQ6" secondAttribute="bottom" constant="307.66666666666669" id="xuK-bL-gKK"/>
                         </constraints>
                     </view>
@@ -582,6 +582,7 @@
                         <outlet property="idealWeightLabel" destination="kA2-Y3-4xK" id="Qre-40-ylL"/>
                         <outlet property="limitLabel" destination="y8l-Ax-cVP" id="9E7-ts-NpZ"/>
                         <outlet property="nameLabel" destination="GUB-qn-HdZ" id="XYj-99-6qA"/>
+                        <outlet property="progressLabel" destination="e00-uo-VBv" id="zEb-SG-IKd"/>
                         <outlet property="weekProgress" destination="V4b-Ma-uLL" id="vyY-Si-x37"/>
                         <outlet property="weightLabel" destination="UcX-7G-Xdw" id="TtR-rM-Sz1"/>
                     </connections>

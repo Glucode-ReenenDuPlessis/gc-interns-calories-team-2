@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var idealWeightLabel: UILabel!
     @IBOutlet weak var limitLabel: UILabel!
     
+    @IBOutlet weak var progressLabel: UILabel!
+    
     @IBOutlet weak var dayProgress: UIProgressView!
     
     @IBOutlet weak var weekProgress: UIProgressView!
@@ -92,8 +94,11 @@ class ProfileViewController: UIViewController {
     func setUpProgress() {
         let progressAmount = (dailyAmount / userCaloryLimit)
         let b = Float(progressAmount)
-        print(b)
+        let percentage = b * 100
+        let percentString = String(format: "You are %.1f", percentage)
+        let continued = "% from reaching your limit"
         dayProgress.progress = b
+        progressLabel.text = percentString + continued
     }
     
     
