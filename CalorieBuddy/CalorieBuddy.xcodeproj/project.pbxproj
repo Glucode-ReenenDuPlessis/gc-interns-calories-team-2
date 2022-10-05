@@ -25,7 +25,6 @@
 		5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAC28E2F935008008FC /* DetailViewController.swift */; };
 		5C147FAF28E2F935008008FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAD28E2F935008008FC /* ViewController.swift */; };
 		5C3E5CF828ED7B2900BA3A84 /* RecommendationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E5CF728ED7B2900BA3A84 /* RecommendationController.swift */; };
-		5C3E5CFA28ED7C9000BA3A84 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E5CF928ED7C9000BA3A84 /* RecommendationViewController.swift */; };
 		5C6B7DE828E6BF34008AC2C8 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE728E6BF34008AC2C8 /* CategoryPickerView.swift */; };
 		5C6B7DEA28E6BF40008AC2C8 /* CategoryPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE928E6BF40008AC2C8 /* CategoryPickerView.xib */; };
 		5C6B7DF128E6C551008AC2C8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEB28E6C551008AC2C8 /* User+CoreDataClass.swift */; };
@@ -39,6 +38,7 @@
 		5C6B7E0028EAA40C008AC2C8 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DFF28EAA40C008AC2C8 /* LayoutViewController.swift */; };
 		5C6B7E0228EAB099008AC2C8 /* EditNumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7E0128EAB099008AC2C8 /* EditNumberFieldView.swift */; };
 		5C6B7E0428EAB0B5008AC2C8 /* EditNumberFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7E0328EAB0B5008AC2C8 /* EditNumberFieldView.xib */; };
+		5C71698C28EDC91800E4F7BB /* BodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71698B28EDC91800E4F7BB /* BodyCollectionViewCell.swift */; };
 		5CF7C19628E429FD00B84361 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19528E429FD00B84361 /* ProfileViewController.swift */; };
 		5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */; };
 		5CF7C19A28E4672A00B84361 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19928E4672A00B84361 /* EditViewController.swift */; };
@@ -65,7 +65,6 @@
 		5C147FAC28E2F935008008FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5C147FAD28E2F935008008FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C3E5CF728ED7B2900BA3A84 /* RecommendationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationController.swift; sourceTree = "<group>"; };
-		5C3E5CF928ED7C9000BA3A84 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		5C6B7DE728E6BF34008AC2C8 /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 		5C6B7DE928E6BF40008AC2C8 /* CategoryPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryPickerView.xib; sourceTree = "<group>"; };
 		5C6B7DEB28E6C551008AC2C8 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		5C6B7DFF28EAA40C008AC2C8 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		5C6B7E0128EAB099008AC2C8 /* EditNumberFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNumberFieldView.swift; sourceTree = "<group>"; };
 		5C6B7E0328EAB0B5008AC2C8 /* EditNumberFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditNumberFieldView.xib; sourceTree = "<group>"; };
+		5C71698B28EDC91800E4F7BB /* BodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5CF7C19528E429FD00B84361 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 		5CF7C19928E4672A00B84361 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 				5C6B7DFD28E71215008AC2C8 /* EditTextFieldView.xib */,
 				5C6B7E0128EAB099008AC2C8 /* EditNumberFieldView.swift */,
 				5C6B7E0328EAB0B5008AC2C8 /* EditNumberFieldView.xib */,
-				5C3E5CF928ED7C9000BA3A84 /* RecommendationViewController.swift */,
+				5C71698B28EDC91800E4F7BB /* BodyCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,7 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				435EBBD828E591FB004A7296 /* NutritionViewCell.swift in Sources */,
-				5C3E5CFA28ED7C9000BA3A84 /* RecommendationViewController.swift in Sources */,
 				5C6B7DF328E6C551008AC2C8 /* FoodItem+CoreDataClass.swift in Sources */,
 				5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */,
 				5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */,
@@ -296,6 +295,7 @@
 				43EF6C6728E42CF200914C44 /* StatsViewController.swift in Sources */,
 				435EBBB628E4C8CE004A7296 /* CalendarHelper.swift in Sources */,
 				5C6B7DF128E6C551008AC2C8 /* User+CoreDataClass.swift in Sources */,
+				5C71698C28EDC91800E4F7BB /* BodyCollectionViewCell.swift in Sources */,
 				5C3E5CF828ED7B2900BA3A84 /* RecommendationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

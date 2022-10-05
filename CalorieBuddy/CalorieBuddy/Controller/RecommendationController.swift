@@ -11,8 +11,6 @@ class RecommendationController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBOutlet weak var topCollectionView: UICollectionView!
-    
     let categories = ["Asian", "Traditional Tai", "Japanese", "Korean", "Indian", "African"]
     let subTitle = ["12 Receps", "32 Receps", "78 Receps", "13 Receps", "45 Receps", "54 Receps"]
     
@@ -48,7 +46,7 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = categories[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! BodyCollectionViewCell
         cell.setUpContent()
         return cell
     }
@@ -57,18 +55,14 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
         return categories.count    }
 }
 
-class CollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var foodView: UIView!
-    
-    func setUpContent() {
-        foodView.layer.cornerRadius = foodView.frame.size.height / 15
-        foodView.backgroundColor = .cyan
-        
-    }
-    
-}
-
-class TopCollectionViewCell: UICollectionViewCell {
-    
-}
+//class CollectionViewCell: UICollectionViewCell {
+//    
+//    @IBOutlet weak var foodView: UIView!
+//    
+//    func setUpContent() {
+//        foodView.layer.cornerRadius = foodView.frame.size.height / 15
+//        foodView.backgroundColor = .cyan
+//        
+//    }
+//    
+//}

@@ -301,7 +301,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="100" height="72"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodCell" id="Xpl-Ov-4tW" customClass="CollectionViewCell" customModule="CalorieBuddy" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodCell" id="Xpl-Ov-4tW" customClass="BodyCollectionViewCell" customModule="CalorieBuddy" customModuleProvider="target">
                                         <rect key="frame" x="110" y="0.0" width="159" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qsF-is-T1m">
@@ -322,7 +322,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="159" height="222"/>
                                         <connections>
-                                            <outlet property="foodView" destination="0x7-3K-1pp" id="nRS-8c-lhh"/>
+                                            <outlet property="foodView" destination="0x7-3K-1pp" id="aTZ-jy-7UE"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
