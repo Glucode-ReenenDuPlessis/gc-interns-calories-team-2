@@ -21,6 +21,11 @@
 		43B997DF28DC6060007A431F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B997DD28DC6060007A431F /* LaunchScreen.storyboard */; };
 		43EF6C6728E42CF200914C44 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF6C6628E42CF200914C44 /* StatsViewController.swift */; };
 		4C811C1228EEDD3F0024FDA2 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C811C1128EEDD3F0024FDA2 /* LayoutViewController.swift */; };
+		4C811C1328EEDEF10024FDA2 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71699128EE8D0000E4F7BB /* ListSection.swift */; };
+		4C811C1428EEDF060024FDA2 /* ListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71698F28EE8C9500E4F7BB /* ListItems.swift */; };
+		4C811C1528EEDF170024FDA2 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEC28E6C551008AC2C8 /* User+CoreDataProperties.swift */; };
+		4C811C1628EEDF1A0024FDA2 /* FoodItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DED28E6C551008AC2C8 /* FoodItem+CoreDataClass.swift */; };
+		4C811C1728EEDF2A0024FDA2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEB28E6C551008AC2C8 /* User+CoreDataClass.swift */; };
 		5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147F9C28E2F747008008FC /* UIImageView.swift */; };
 		5C147FA128E2F77A008008FC /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C147F9F28E2F77A008008FC /* FoodItemCell.xib */; };
 		5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FA028E2F77A008008FC /* FoodItemCell.swift */; };
@@ -32,7 +37,6 @@
 		5C3E5CF828ED7B2900BA3A84 /* RecommendationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E5CF728ED7B2900BA3A84 /* RecommendationController.swift */; };
 		5C6B7DE828E6BF34008AC2C8 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE728E6BF34008AC2C8 /* CategoryPickerView.swift */; };
 		5C6B7DEA28E6BF40008AC2C8 /* CategoryPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE928E6BF40008AC2C8 /* CategoryPickerView.xib */; };
-		5C6B7DF128E6C551008AC2C8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEB28E6C551008AC2C8 /* User+CoreDataClass.swift */; };
 		5C6B7DF428E6C551008AC2C8 /* FoodItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEE28E6C551008AC2C8 /* FoodItem+CoreDataProperties.swift */; };
 		5C6B7DF528E6C551008AC2C8 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEF28E6C551008AC2C8 /* Meal+CoreDataClass.swift */; };
 		5C6B7DF628E6C551008AC2C8 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DF028E6C551008AC2C8 /* Meal+CoreDataProperties.swift */; };
@@ -312,14 +316,18 @@
 				435EBBDC28E6D225004A7296 /* Extensions.swift in Sources */,
 				435EBBD828E591FB004A7296 /* NutritionViewCell.swift in Sources */,
 				435EBBDA28E6D104004A7296 /* FoodItemViewCell.swift in Sources */,
+				4C811C1528EEDF170024FDA2 /* User+CoreDataProperties.swift in Sources */,
 				5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */,
 				5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */,
+				4C811C1628EEDF1A0024FDA2 /* FoodItem+CoreDataClass.swift in Sources */,
 				5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */,
+				4C811C1428EEDF060024FDA2 /* ListItems.swift in Sources */,
 				5C6B7DF628E6C551008AC2C8 /* Meal+CoreDataProperties.swift in Sources */,
 				43B997D328DC605D007A431F /* AppDelegate.swift in Sources */,
 				5CF7C19628E429FD00B84361 /* ProfileViewController.swift in Sources */,
 				436232BB28E2FE7100B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */,
 				437DAC2228E4554E0034D810 /* DatePickerViewCell.swift in Sources */,
+				4C811C1728EEDF2A0024FDA2 /* User+CoreDataClass.swift in Sources */,
 				5C6B7DE828E6BF34008AC2C8 /* CategoryPickerView.swift in Sources */,
 				43B997D528DC605D007A431F /* SceneDelegate.swift in Sources */,
 				5C6B7DFC28E71208008AC2C8 /* EditTextFieldView.swift in Sources */,
@@ -329,6 +337,7 @@
 				5C6B7E0228EAB099008AC2C8 /* EditNumberFieldView.swift in Sources */,
 				4C811C1228EEDD3F0024FDA2 /* LayoutViewController.swift in Sources */,
 				5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */,
+				4C811C1328EEDEF10024FDA2 /* ListSection.swift in Sources */,
 				5C147FAF28E2F935008008FC /* ViewController.swift in Sources */,
 				5C6B7DF428E6C551008AC2C8 /* FoodItem+CoreDataProperties.swift in Sources */,
 				5C6B7DF528E6C551008AC2C8 /* Meal+CoreDataClass.swift in Sources */,
@@ -338,7 +347,6 @@
 				43305BC428EDDEC6009128A2 /* TabBarVC.swift in Sources */,
 				435EBBB628E4C8CE004A7296 /* CalendarHelper.swift in Sources */,
 				5C71698E28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift in Sources */,
-				5C6B7DF128E6C551008AC2C8 /* User+CoreDataClass.swift in Sources */,
 				5C71698C28EDC91800E4F7BB /* BodyCollectionViewCell.swift in Sources */,
 				5C3E5CF828ED7B2900BA3A84 /* RecommendationController.swift in Sources */,
 			);

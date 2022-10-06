@@ -20,20 +20,17 @@ class RecommendationController: UIViewController {
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
-        
-        UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnvironment in
-            guard let self = self else { return }
-            let section = self?.sections[sectionIndex]
+        UICollectionViewCompositionalLayout { (sectionIndex: Int,
+                                               layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             
-            switch sections {
-            case .header:
-                return nil
+            switch sectionIndex {
+            case 0:
                 let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(50), heightDimension: .absolute(50)), subitems: [item])
                 let section = NSCollectionLayoutSection(group: group)
                 return section
-                
-            case .body:
+
+            case 1:
                 // Item
                 let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1)))
 
@@ -47,6 +44,9 @@ class RecommendationController: UIViewController {
 
                 // return
                 return  section
+                
+            default:
+                return nil
             }
             
 //            switch section {
@@ -85,13 +85,14 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
             return cell
 
         case .body(let items):
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! BodyCollectionViewCell
-            cell.setUpContent(items[indexPath.row])
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! BodyCollectionViewCell
+//            cell.setUpContent(items[indexPath.row])
+            let cell = UICollectionViewCell()
             return cell
         }
 //        let item = categories[indexPath.row]
 //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! BodyCollectionViewCell
-//        cell.setUpContent(<#ListItem#>)
+//        cell.setUpContent()
 //        return cell
     }
 }
