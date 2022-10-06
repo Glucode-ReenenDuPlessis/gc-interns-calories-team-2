@@ -283,26 +283,48 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0nB-0N-NNq">
-                                        <rect key="frame" x="0.0" y="75" width="100" height="72"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerCell" id="0nB-0N-NNq" customClass="HeaderCollectionViewCell" customModule="CalorieBuddy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="53" width="133" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="B02-IM-oLE">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="133" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b40-X1-lyg">
-                                                    <rect key="frame" x="29" y="26" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxb-bP-uUX">
+                                                    <rect key="frame" x="10" y="10" width="113" height="96"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b40-X1-lyg">
+                                                            <rect key="frame" x="5" y="39" width="103" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="b40-X1-lyg" secondAttribute="trailing" constant="5" id="0yd-Yf-ln4"/>
+                                                        <constraint firstAttribute="width" secondItem="xxb-bP-uUX" secondAttribute="height" multiplier="101:83" id="Cv8-a3-80h"/>
+                                                        <constraint firstItem="b40-X1-lyg" firstAttribute="leading" secondItem="xxb-bP-uUX" secondAttribute="leading" constant="5" id="X3Z-Wo-ZiT"/>
+                                                        <constraint firstItem="b40-X1-lyg" firstAttribute="centerY" secondItem="xxb-bP-uUX" secondAttribute="centerY" id="mMe-NP-Pvt"/>
+                                                        <constraint firstItem="b40-X1-lyg" firstAttribute="centerX" secondItem="xxb-bP-uUX" secondAttribute="centerX" id="t7K-6B-UF1"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="xxb-bP-uUX" secondAttribute="bottom" constant="10" id="A4D-rz-XqG"/>
+                                                <constraint firstItem="xxb-bP-uUX" firstAttribute="top" secondItem="B02-IM-oLE" secondAttribute="top" constant="10" id="KpK-Yj-TEN"/>
+                                                <constraint firstItem="xxb-bP-uUX" firstAttribute="leading" secondItem="B02-IM-oLE" secondAttribute="leading" constant="10" id="cg7-5J-U2Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="xxb-bP-uUX" secondAttribute="trailing" constant="10" id="rsQ-MZ-Jba"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="100" height="72"/>
+                                        <size key="customSize" width="133" height="116"/>
+                                        <connections>
+                                            <outlet property="titleText" destination="b40-X1-lyg" id="1b2-nh-6P0"/>
+                                            <outlet property="titleView" destination="xxb-bP-uUX" id="g1K-eR-FU7"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodCell" id="Xpl-Ov-4tW" customClass="BodyCollectionViewCell" customModule="CalorieBuddy" customModuleProvider="target">
-                                        <rect key="frame" x="110" y="0.0" width="159" height="222"/>
+                                        <rect key="frame" x="143" y="0.0" width="159" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qsF-is-T1m">
                                             <rect key="frame" x="0.0" y="0.0" width="159" height="222"/>

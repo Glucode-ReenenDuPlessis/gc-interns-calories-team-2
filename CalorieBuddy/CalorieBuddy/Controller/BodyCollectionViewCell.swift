@@ -11,7 +11,7 @@ class BodyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var foodView: UIView!
  
-    func setUpContent() {
+    func setUpContent(_ item: ListItem) {
         foodView.layer.cornerRadius = foodView.frame.size.height / 15
         foodView.backgroundColor = .cyan
 
