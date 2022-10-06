@@ -41,6 +41,7 @@ class RecommendationController: UIViewController {
 
 extension RecommendationController: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count    }
     
