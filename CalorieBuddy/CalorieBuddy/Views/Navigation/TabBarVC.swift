@@ -14,8 +14,7 @@ class TabBarVC: UIViewController {
         bar.tabBar.barStyle = .black
         bar.tabBar.barTintColor = .systemBackground
         bar.tabBar.tintColor = .label
-        bar.tabBar.layer.cornerRadius = 50
-        bar.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
        return bar
     }()
     

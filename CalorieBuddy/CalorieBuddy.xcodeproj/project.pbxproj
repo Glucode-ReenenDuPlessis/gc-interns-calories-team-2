@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		43305BC428EDDEC6009128A2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43305BC328EDDEC6009128A2 /* TabBarVC.swift */; };
 		43305BC628EE1683009128A2 /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43305BC528EE1683009128A2 /* CustomTabBarVC.swift */; };
+		4350345328EF8F5C009F25F9 /* TabBarStoryBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350345228EF8F5C009F25F9 /* TabBarStoryBoardVC.swift */; };
+		4350345928EF9296009F25F9 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350345528EF9295009F25F9 /* PageCell.swift */; };
+		4350345A28EF9296009F25F9 /* SwippingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350345628EF9296009F25F9 /* SwippingController.swift */; };
+		4350345B28EF9296009F25F9 /* SwipingController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350345728EF9296009F25F9 /* SwipingController+extension.swift */; };
+		4350345C28EF9296009F25F9 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350345828EF9296009F25F9 /* Page.swift */; };
 		435EBBB628E4C8CE004A7296 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBB528E4C8CE004A7296 /* CalendarHelper.swift */; };
 		435EBBD828E591FB004A7296 /* NutritionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBD728E591FB004A7296 /* NutritionViewCell.swift */; };
 		435EBBDA28E6D104004A7296 /* FoodItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBD928E6D104004A7296 /* FoodItemViewCell.swift */; };
@@ -55,6 +60,11 @@
 /* Begin PBXFileReference section */
 		43305BC328EDDEC6009128A2 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		43305BC528EE1683009128A2 /* CustomTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
+		4350345228EF8F5C009F25F9 /* TabBarStoryBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarStoryBoardVC.swift; sourceTree = "<group>"; };
+		4350345528EF9295009F25F9 /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		4350345628EF9296009F25F9 /* SwippingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwippingController.swift; sourceTree = "<group>"; };
+		4350345728EF9296009F25F9 /* SwipingController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwipingController+extension.swift"; sourceTree = "<group>"; };
+		4350345828EF9296009F25F9 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		435EBBB528E4C8CE004A7296 /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		435EBBD728E591FB004A7296 /* NutritionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewCell.swift; sourceTree = "<group>"; };
 		435EBBD928E6D104004A7296 /* FoodItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemViewCell.swift; sourceTree = "<group>"; };
@@ -118,8 +128,20 @@
 			children = (
 				43305BC328EDDEC6009128A2 /* TabBarVC.swift */,
 				43305BC528EE1683009128A2 /* CustomTabBarVC.swift */,
+				4350345228EF8F5C009F25F9 /* TabBarStoryBoardVC.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		4350345428EF9205009F25F9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4350345828EF9296009F25F9 /* Page.swift */,
+				4350345528EF9295009F25F9 /* PageCell.swift */,
+				4350345728EF9296009F25F9 /* SwipingController+extension.swift */,
+				4350345628EF9296009F25F9 /* SwippingController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		43B997C628DC605D007A431F = {
@@ -166,6 +188,7 @@
 		43EF6C6428E42CDA00914C44 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4350345428EF9205009F25F9 /* Onboarding */,
 				43305BBC28EDD558009128A2 /* Navigation */,
 				43EF6C6528E42CDF00914C44 /* Stats */,
 			);
@@ -316,6 +339,7 @@
 				435EBBDC28E6D225004A7296 /* Extensions.swift in Sources */,
 				435EBBD828E591FB004A7296 /* NutritionViewCell.swift in Sources */,
 				435EBBDA28E6D104004A7296 /* FoodItemViewCell.swift in Sources */,
+				4350345B28EF9296009F25F9 /* SwipingController+extension.swift in Sources */,
 				4C811C1528EEDF170024FDA2 /* User+CoreDataProperties.swift in Sources */,
 				5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */,
 				5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */,
@@ -323,6 +347,7 @@
 				5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */,
 				4C811C1428EEDF060024FDA2 /* ListItems.swift in Sources */,
 				5C6B7DF628E6C551008AC2C8 /* Meal+CoreDataProperties.swift in Sources */,
+				4350345928EF9296009F25F9 /* PageCell.swift in Sources */,
 				43B997D328DC605D007A431F /* AppDelegate.swift in Sources */,
 				5CF7C19628E429FD00B84361 /* ProfileViewController.swift in Sources */,
 				436232BB28E2FE7100B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */,
@@ -343,8 +368,11 @@
 				5C6B7DF528E6C551008AC2C8 /* Meal+CoreDataClass.swift in Sources */,
 				5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */,
 				43305BC628EE1683009128A2 /* CustomTabBarVC.swift in Sources */,
+				4350345A28EF9296009F25F9 /* SwippingController.swift in Sources */,
 				43EF6C6728E42CF200914C44 /* StatsViewController.swift in Sources */,
+				4350345C28EF9296009F25F9 /* Page.swift in Sources */,
 				43305BC428EDDEC6009128A2 /* TabBarVC.swift in Sources */,
+				4350345328EF8F5C009F25F9 /* TabBarStoryBoardVC.swift in Sources */,
 				435EBBB628E4C8CE004A7296 /* CalendarHelper.swift in Sources */,
 				5C71698E28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift in Sources */,
 				5C71698C28EDC91800E4F7BB /* BodyCollectionViewCell.swift in Sources */,
