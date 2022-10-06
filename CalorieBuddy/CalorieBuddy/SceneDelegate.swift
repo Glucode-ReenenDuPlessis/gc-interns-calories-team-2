@@ -26,8 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        randomViewController.view.backgroundColor = .purple
 //        let layout = UICollectionViewFlowLayout()
 //        layout.scrollDirection = .horizontal
-//        let statsController = StatsViewController()
-//        window?.rootViewController = statsController
+        let statsController = TabBarVC()
+        window?.rootViewController = statsController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
