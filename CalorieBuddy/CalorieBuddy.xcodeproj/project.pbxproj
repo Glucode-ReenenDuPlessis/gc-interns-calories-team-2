@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22909CA728E5B74300CB418A /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22909CA628E5B74300CB418A /* PracticeViewController.swift */; };
 		43305BC428EDDEC6009128A2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43305BC328EDDEC6009128A2 /* TabBarVC.swift */; };
 		43305BC628EE1683009128A2 /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43305BC528EE1683009128A2 /* CustomTabBarVC.swift */; };
 		435EBBB628E4C8CE004A7296 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBB528E4C8CE004A7296 /* CalendarHelper.swift */; };
@@ -21,6 +20,7 @@
 		43B997DC28DC6060007A431F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B997DB28DC6060007A431F /* Assets.xcassets */; };
 		43B997DF28DC6060007A431F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B997DD28DC6060007A431F /* LaunchScreen.storyboard */; };
 		43EF6C6728E42CF200914C44 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF6C6628E42CF200914C44 /* StatsViewController.swift */; };
+		4C811C1228EEDD3F0024FDA2 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C811C1128EEDD3F0024FDA2 /* LayoutViewController.swift */; };
 		5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147F9C28E2F747008008FC /* UIImageView.swift */; };
 		5C147FA128E2F77A008008FC /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C147F9F28E2F77A008008FC /* FoodItemCell.xib */; };
 		5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FA028E2F77A008008FC /* FoodItemCell.swift */; };
@@ -33,20 +33,15 @@
 		5C6B7DE828E6BF34008AC2C8 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE728E6BF34008AC2C8 /* CategoryPickerView.swift */; };
 		5C6B7DEA28E6BF40008AC2C8 /* CategoryPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE928E6BF40008AC2C8 /* CategoryPickerView.xib */; };
 		5C6B7DF128E6C551008AC2C8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEB28E6C551008AC2C8 /* User+CoreDataClass.swift */; };
-		5C6B7DF228E6C551008AC2C8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEC28E6C551008AC2C8 /* User+CoreDataProperties.swift */; };
-		5C6B7DF328E6C551008AC2C8 /* FoodItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DED28E6C551008AC2C8 /* FoodItem+CoreDataClass.swift */; };
 		5C6B7DF428E6C551008AC2C8 /* FoodItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEE28E6C551008AC2C8 /* FoodItem+CoreDataProperties.swift */; };
 		5C6B7DF528E6C551008AC2C8 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEF28E6C551008AC2C8 /* Meal+CoreDataClass.swift */; };
 		5C6B7DF628E6C551008AC2C8 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DF028E6C551008AC2C8 /* Meal+CoreDataProperties.swift */; };
 		5C6B7DFC28E71208008AC2C8 /* EditTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DFB28E71208008AC2C8 /* EditTextFieldView.swift */; };
 		5C6B7DFE28E71215008AC2C8 /* EditTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7DFD28E71215008AC2C8 /* EditTextFieldView.xib */; };
-		5C6B7E0028EAA40C008AC2C8 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DFF28EAA40C008AC2C8 /* LayoutViewController.swift */; };
 		5C6B7E0228EAB099008AC2C8 /* EditNumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7E0128EAB099008AC2C8 /* EditNumberFieldView.swift */; };
 		5C6B7E0428EAB0B5008AC2C8 /* EditNumberFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7E0328EAB0B5008AC2C8 /* EditNumberFieldView.xib */; };
 		5C71698C28EDC91800E4F7BB /* BodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71698B28EDC91800E4F7BB /* BodyCollectionViewCell.swift */; };
 		5C71698E28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71698D28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift */; };
-		5C71699028EE8C9500E4F7BB /* ListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71698F28EE8C9500E4F7BB /* ListItems.swift */; };
-		5C71699228EE8D0000E4F7BB /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71699128EE8D0000E4F7BB /* ListSection.swift */; };
 		5C71699628EE8EE300E4F7BB /* Mock Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71699528EE8EE300E4F7BB /* Mock Data.swift */; };
 		5CF7C19628E429FD00B84361 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19528E429FD00B84361 /* ProfileViewController.swift */; };
 		5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */; };
@@ -54,7 +49,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22909CA628E5B74300CB418A /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		43305BC328EDDEC6009128A2 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		43305BC528EE1683009128A2 /* CustomTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
 		435EBBB528E4C8CE004A7296 /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
@@ -70,6 +64,7 @@
 		43B997DE28DC6060007A431F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43B997E028DC6060007A431F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43EF6C6628E42CF200914C44 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		4C811C1128EEDD3F0024FDA2 /* LayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		5C147F9C28E2F747008008FC /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		5C147F9F28E2F77A008008FC /* FoodItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemCell.xib; sourceTree = "<group>"; };
 		5C147FA028E2F77A008008FC /* FoodItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
@@ -89,7 +84,6 @@
 		5C6B7DF028E6C551008AC2C8 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5C6B7DFB28E71208008AC2C8 /* EditTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextFieldView.swift; sourceTree = "<group>"; };
 		5C6B7DFD28E71215008AC2C8 /* EditTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTextFieldView.xib; sourceTree = "<group>"; };
-		5C6B7DFF28EAA40C008AC2C8 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		5C6B7E0128EAB099008AC2C8 /* EditNumberFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNumberFieldView.swift; sourceTree = "<group>"; };
 		5C6B7E0328EAB0B5008AC2C8 /* EditNumberFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditNumberFieldView.xib; sourceTree = "<group>"; };
 		5C71698B28EDC91800E4F7BB /* BodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -100,8 +94,6 @@
 		5CF7C19528E429FD00B84361 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5CF7C19728E42D1B00B84361 /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 		5CF7C19928E4672A00B84361 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		B873FC9E28E34D4B00A3FE4E /* FoodItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B873FC9F28E34D4B00A3FE4E /* FoodItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CF00296F28EC654B004C0033 /* DetailViewComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewComponent.xib; sourceTree = "<group>"; };
 		CF00297028EC654B004C0033 /* DetailViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +182,7 @@
 		5C147F9E28E2F753008008FC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4C811C1128EEDD3F0024FDA2 /* LayoutViewController.swift */,
 				435EBBB528E4C8CE004A7296 /* CalendarHelper.swift */,
 				5C147F9C28E2F747008008FC /* UIImageView.swift */,
 				435EBBDB28E6D225004A7296 /* Extensions.swift */,
@@ -321,7 +314,6 @@
 				435EBBDA28E6D104004A7296 /* FoodItemViewCell.swift in Sources */,
 				5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */,
 				5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */,
-				5C6B7E0028EAA40C008AC2C8 /* LayoutViewController.swift in Sources */,
 				5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */,
 				5C6B7DF628E6C551008AC2C8 /* Meal+CoreDataProperties.swift in Sources */,
 				43B997D328DC605D007A431F /* AppDelegate.swift in Sources */,
@@ -335,6 +327,7 @@
 				5C147FA528E2F7A8008008FC /* Food.swift in Sources */,
 				5CF7C19A28E4672A00B84361 /* EditViewController.swift in Sources */,
 				5C6B7E0228EAB099008AC2C8 /* EditNumberFieldView.swift in Sources */,
+				4C811C1228EEDD3F0024FDA2 /* LayoutViewController.swift in Sources */,
 				5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */,
 				5C147FAF28E2F935008008FC /* ViewController.swift in Sources */,
 				5C6B7DF428E6C551008AC2C8 /* FoodItem+CoreDataProperties.swift in Sources */,
@@ -342,7 +335,6 @@
 				5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */,
 				43305BC628EE1683009128A2 /* CustomTabBarVC.swift in Sources */,
 				43EF6C6728E42CF200914C44 /* StatsViewController.swift in Sources */,
-				B873FCA128E34D4B00A3FE4E /* FoodItem+CoreDataProperties.swift in Sources */,
 				43305BC428EDDEC6009128A2 /* TabBarVC.swift in Sources */,
 				435EBBB628E4C8CE004A7296 /* CalendarHelper.swift in Sources */,
 				5C71698E28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift in Sources */,
