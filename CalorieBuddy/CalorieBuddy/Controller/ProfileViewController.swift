@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
     var ID = ""
     var finalLimit: Double = 0.0
     var userCaloryLimit = Double()
-    var dailyAmount: Double = 800
+    var dailyAmount: Double = 1000
     
     var users: [User] {
         let data = dbh.getUserInfo()
