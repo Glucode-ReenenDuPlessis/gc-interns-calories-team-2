@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol DateSelectionDelagate{
+    func didSelectDate(date: Date)
+}
+
 class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var dateSelection : DateSelectionDelagate!
     let cellID = "cell"
     var totalSquares = [Date]()
     var selectedDate = Date()
@@ -99,8 +104,8 @@ class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedDate = totalSquares[indexPath.item]
+        dateSelection.didSelectDate(date: selectedDate)
         collectionView.reloadData()
-        print("\(selectedDate)")
     }
 }
 
