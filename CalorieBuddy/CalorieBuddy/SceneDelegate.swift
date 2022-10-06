@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        randomViewController.view.backgroundColor = .purple
 //        let layout = UICollectionViewFlowLayout()
 //        layout.scrollDirection = .horizontal
-        let statsController = StatsViewController()
+        let statsController = TabBarVC()
         window?.rootViewController = statsController
     }
 
