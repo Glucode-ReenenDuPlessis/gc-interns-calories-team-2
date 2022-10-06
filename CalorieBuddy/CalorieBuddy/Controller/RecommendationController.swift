@@ -11,7 +11,14 @@ class RecommendationController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+<<<<<<< HEAD
     private let sections = MockData.shared.pageData
+=======
+    @IBOutlet weak var topCollectionView: UICollectionView!
+    
+    let categories = ["Asian", "Traditional Tai", "Japanese", "Korean", "Indian", "African"]
+    let subTitle = ["12 Receps", "32 Receps", "78 Receps", "13 Receps", "45 Receps", "54 Receps"]
+>>>>>>> parent of 457021a (Separated recommendation cell class)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +85,7 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
         return sections[section].count    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+<<<<<<< HEAD
         switch sections[indexPath.section] {
         case .header(let items):
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "headerCell", for: indexPath) as! HeaderCollectionViewCell
@@ -93,9 +101,16 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
 //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! BodyCollectionViewCell
 //        cell.setUpContent(<#ListItem#>)
 //        return cell
+=======
+        let item = categories[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! CollectionViewCell
+        cell.setUpContent()
+        return cell
+>>>>>>> parent of 457021a (Separated recommendation cell class)
     }
 }
 
+<<<<<<< HEAD
 //class CollectionViewCell: UICollectionViewCell {
 //
 //    @IBOutlet weak var foodView: UIView!
@@ -107,3 +122,20 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
 //    }
 //
 //}
+=======
+class CollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var foodView: UIView!
+    
+    func setUpContent() {
+        foodView.layer.cornerRadius = foodView.frame.size.height / 15
+        foodView.backgroundColor = .cyan
+        
+    }
+    
+}
+
+class TopCollectionViewCell: UICollectionViewCell {
+    
+}
+>>>>>>> parent of 457021a (Separated recommendation cell class)

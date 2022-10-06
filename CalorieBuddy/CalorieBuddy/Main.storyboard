@@ -323,8 +323,13 @@
                                             <outlet property="titleView" destination="xxb-bP-uUX" id="g1K-eR-FU7"/>
                                         </connections>
                                     </collectionViewCell>
+<<<<<<< HEAD
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodCell" id="Xpl-Ov-4tW" customClass="BodyCollectionViewCell" customModule="CalorieBuddy" customModuleProvider="target">
                                         <rect key="frame" x="143" y="0.0" width="159" height="222"/>
+=======
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodCell" id="Xpl-Ov-4tW" customClass="CollectionViewCell" customModule="CalorieBuddy" customModuleProvider="target">
+                                        <rect key="frame" x="110" y="0.0" width="159" height="222"/>
+>>>>>>> parent of 457021a (Separated recommendation cell class)
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qsF-is-T1m">
                                             <rect key="frame" x="0.0" y="0.0" width="159" height="222"/>
@@ -344,7 +349,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="159" height="222"/>
                                         <connections>
-                                            <outlet property="foodView" destination="0x7-3K-1pp" id="aTZ-jy-7UE"/>
+                                            <outlet property="foodView" destination="0x7-3K-1pp" id="nRS-8c-lhh"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
