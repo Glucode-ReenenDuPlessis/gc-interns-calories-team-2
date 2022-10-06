@@ -171,14 +171,13 @@
                     </navigationItem>
                     <size key="freeformSize" width="390" height="844"/>
                     <connections>
+                        <outlet property="datePicker" destination="Egk-hO-Wqh" id="jEA-wI-DHb"/>
                         <outlet property="itemImage" destination="nfV-6K-nrH" id="nLH-LO-V8r"/>
                         <outlet property="itemName" destination="LGE-ML-sDO" id="0OT-Yl-nMq"/>
-                        <outlet property="itemSlider" destination="GTu-Lk-ePa" id="vSW-54-taB"/>
                         <outlet property="itemsImageView" destination="fMD-KP-HAR" id="tHw-Po-9eq"/>
                         <outlet property="nutrientLabel1" destination="Q4f-FS-9JE" id="2DC-Jb-oCd"/>
-                        <outlet property="nutrientLabel2" destination="SMl-2M-FaO" id="yL6-j1-1AZ"/>
-                        <outlet property="nutrientLabel3" destination="qR9-Sk-qXA" id="fjD-wH-pAt"/>
-                        <outlet property="nutrientLabel4" destination="34U-C2-x4v" id="bK7-hb-9wQ"/>
+                        <outlet property="picker" destination="Jgu-yK-hxW" id="rfw-qS-oOt"/>
+                        <outlet property="servingsLabel" destination="qR9-Sk-qXA" id="dmX-ZN-lFS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysF-BR-htV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -384,10 +383,10 @@
             </objects>
             <point key="canvasLocation" x="47.692307692307693" y="-2.1327014218009479"/>
         </scene>
-        <!--Profile View-->
+        <!--Profile View Controller-->
         <scene sceneID="Gcb-Xb-aPj">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="CIl-Dx-Gwc" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="CIl-Dx-Gwc" customClass="ProfileViewController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E38-bS-XvT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
