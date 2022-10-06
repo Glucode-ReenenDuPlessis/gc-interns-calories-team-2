@@ -117,7 +117,6 @@ extension StatsViewController{
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionId, for: indexPath)
             return cell
-            
         }else if indexPath.item == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: baseId, for: indexPath) as! BaseCell
             cell.numberTextView.text = "Nutrition Budget"
@@ -128,6 +127,7 @@ extension StatsViewController{
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: foodItemId, for: indexPath) as! FoodItemViewCell
+            
             return cell
         }
     }

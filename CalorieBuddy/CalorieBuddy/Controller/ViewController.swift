@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         
         dp.getAllItems()
      
-        
+        print(dp.models.count)
     }
 
     @IBAction func getTapped(_ sender: UIButton) {
@@ -43,8 +43,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-
 }
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource {
@@ -91,9 +89,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
 //            }
 //        }.resume()
 //    }
-//    
 //
-//    
+//
+//
 //    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
 //        guard let url = URL(string: link) else { return }
 //        downloaded(from: url, contentMode: mode)

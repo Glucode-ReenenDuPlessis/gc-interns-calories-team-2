@@ -100,7 +100,7 @@ class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedDate = totalSquares[indexPath.item]
         collectionView.reloadData()
-        
+        print("\(selectedDate)")
     }
 }
 

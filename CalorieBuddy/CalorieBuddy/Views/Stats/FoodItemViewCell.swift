@@ -18,16 +18,12 @@ class FoodItemViewCell: UICollectionViewCell {
     
     var titleText: UILabel = {
         var text = UILabel()
-        let attributedText = NSMutableAttributedString(string: "Title",attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .semibold)])
-        text.attributedText = attributedText
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
     }()
     
     var subText: UILabel = {
         var text = UILabel()
-        let attributedText = NSMutableAttributedString(string: "Sub texts",attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .regular) ])
-        text.attributedText = attributedText
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
     }()
@@ -35,7 +31,6 @@ class FoodItemViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .random()
-        setupLayout()
         layer.cornerRadius = 20
     }
     
@@ -45,19 +40,7 @@ class FoodItemViewCell: UICollectionViewCell {
     
     
     func setupLayout(){
-        addSubview(titleText)
-        addSubview(subText)
-        NSLayoutConstraint.activate([
-            titleText.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 20),
-            titleText.topAnchor.constraint(equalTo: topAnchor,constant: 10),
-            titleText.trailingAnchor.constraint(equalTo: trailingAnchor),
-            titleText.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5),
-            
-            
-            subText.topAnchor.constraint(equalTo: titleText.bottomAnchor),
-            subText.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            subText.trailingAnchor.constraint(equalTo: trailingAnchor),
-            subText.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -20)
-        ])
+        let bottomTextControner = UIView()
+        bottomTextControner.translatesAutoresizingMaskIntoConstraints = false
     }
 }

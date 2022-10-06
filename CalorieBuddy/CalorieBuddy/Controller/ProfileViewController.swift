@@ -25,13 +25,13 @@ class ProfileViewController: UIViewController {
     var progressValue = 0.0
     
     
-    var finalName: String = ""
+    var finalName = ""
     var finalWeight = ""
     var finalHeight = ""
     var ID = ""
     var finalLimit: Double = 0.0
     var userCaloryLimit = Double()
-    var dailyAmount: Double = 1200
+    var dailyAmount: Double = 1000
     
     var users: [User] {
         let data = dbh.getUserInfo()
@@ -43,13 +43,13 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
         
-        nameLabel.text = finalName
-        weightLabel.text = finalWeight
-        heightLabel.text = finalHeight
-        idealWeightLabel.text = ID
-      //  limitLabel.text = finalLimit
-      
+//        nameLabel.text = finalName
+//        weightLabel.text = finalWeight
+//        heightLabel.text = finalHeight
+//        idealWeightLabel.text = ID
+//        limitLabel.text = finalLimit
         setUpView()
         setUpProgress()
     }
@@ -81,6 +81,15 @@ class ProfileViewController: UIViewController {
 //
 //    }
     
+//    @objc func setUpProgress(){
+//        progressValue = progressValue + 0.01
+//        self.dayProgress.progress = Float(progressValue)
+//        if progressValue != 1.0 {
+//           self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
+//
+//
+//        }
+//    }
     
     func setUpProgress() {
         let progressAmount = (dailyAmount / userCaloryLimit)
@@ -91,8 +100,6 @@ class ProfileViewController: UIViewController {
         dayProgress.progress = b
         progressLabel.text = percentString + continued
     }
-    
-    
     
     
     @IBAction func buttonPressed(_ sender: UIButton) {

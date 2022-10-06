@@ -12,7 +12,6 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var servingsLabel: UILabel!
-    @IBOutlet weak var itemImage: UIView!
     @IBOutlet weak var itemsImageView: UIImageView!
     
     @IBOutlet weak var itemName: UILabel!

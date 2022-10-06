@@ -140,8 +140,6 @@ class EditViewController: UIViewController {
         
         for user in user {
             nameLabel.text = user.userName
-           
-            
         }
         
     }
@@ -154,14 +152,14 @@ class EditViewController: UIViewController {
         print(limitText?.text ?? "No text")
         print(ageText?.text ?? "No text")
         dbh.editUser(userAge: ageText!.text!, userHeight: heightText!.text!, userWeight: weightText!.text!, userLimit: limitText!.text!)
-
+//
 //      self.nameText = name.text!
 //      self.weightText = weight.text!
 //      self.heightText = height.text!
 //      self.idealWeightText = idealWeight.text!
 //      self.limitText = limit.text!
 //
-//      performSegue(withIdentifier: "showDetail", sender: self)
+//      *  performSegue(withIdentifier: "showDetail", sender: self)
         
         
         
@@ -180,9 +178,9 @@ class EditViewController: UIViewController {
 //        vc.finalHeight = self.heightText
 //        vc.ID = self.idealWeightText
 //        vc.finalLimit = self.limitText
-//
-//
+    
+    
 //    }
-//
+    
 
 }
