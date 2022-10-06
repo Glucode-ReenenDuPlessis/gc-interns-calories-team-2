@@ -2,7 +2,7 @@
 //  FoodItem+CoreDataProperties.swift
 //  CalorieBuddy
 //
-//  Created by Sthembiso Ndhlazi on 2022/09/27.
+//  Created by Sibusiso Mbonani on 2022/09/30.
 //
 //
 
@@ -16,10 +16,10 @@ extension FoodItem {
         return NSFetchRequest<FoodItem>(entityName: "FoodItem")
     }
 
-    @NSManaged public var foodName: String?
     @NSManaged public var calorie: Double
     @NSManaged public var category: String?
     @NSManaged public var date: Date?
+    @NSManaged public var foodName: String?
     @NSManaged public var imageString: String?
 
 }

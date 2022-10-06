@@ -18,7 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
 //        self.window = UIWindow(windowScene: windowScene)
+
 //        
+
 //        window = UIWindow(windowScene: windowScene)
 //        window?.makeKeyAndVisible()
         
@@ -26,8 +28,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        randomViewController.view.backgroundColor = .purple
 //        let layout = UICollectionViewFlowLayout()
 //        layout.scrollDirection = .horizontal
-//        let statsController = StatsViewController()
-//        window?.rootViewController = statsController
+
+        let statsController = TabBarVC()
+        window?.rootViewController = statsController
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -10,28 +10,100 @@ import CoreData
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var age: UITextField!
-    @IBOutlet weak var height: UITextField!
-    @IBOutlet weak var weight: UITextField!
-    @IBOutlet weak var limit: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var idealWeightLabel: UILabel!
+    @IBOutlet weak var limitLabel: UILabel!
+    
+    @IBOutlet weak var progressLabel: UILabel!
+    
+    @IBOutlet weak var dayProgress: UIProgressView!
+    
+    @IBOutlet weak var weekProgress: UIProgressView!
+    
+    var progressValue = 0.0
+    
+    
+    var finalName = ""
+    var finalWeight = ""
+    var finalHeight = ""
+    var ID = ""
+    var finalLimit: Double = 0.0
+    var userCaloryLimit = Double()
+    var dailyAmount: Double = 1000
+    
+    var users: [User] {
+        let data = dbh.getUserInfo()
+        return data
+    }
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let dbh = DatabaseHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
         
-       // dbh.addUser(userName: "Sbu", userAge: "27", userHeight: "170", userWeight: "90", userLimit: "1399", gender: true)
+//        nameLabel.text = finalName
+//        weightLabel.text = finalWeight
+//        heightLabel.text = finalHeight
+//        idealWeightLabel.text = ID
+//        limitLabel.text = finalLimit
+        setUpView()
+        setUpProgress()
     }
     
-
-    @IBAction func addInfoPressed(_ sender: UIButton) {
-
-        dbh.addUser(userName: "OP", userAge: "25", userHeight: "120", userWeight: "67.7", userLimit: "1200", idealWeight: "60", gender: true)
+//    override func viewWillAppear(_ animated: Bool) {
+//        users = dbh.getUserInfo()
+//    }
+    
+    func setUpView() {
+        
+        for user in users {
+            userCaloryLimit = user.caloryLimit
+            
+            nameLabel.text = user.userName
+            weightLabel.text = String(user.userWeight)
+            heightLabel.text = String(user.userHeight)
+            idealWeightLabel.text = String(user.idealUserWeight)
+            limitLabel.text = String(user.caloryLimit)
+            
+        }
+    }
+    
+//
+//    @IBAction func addInfoPressed(_ sender: UIButton) {
+//
+//        //        dbh.addUser(userName: "OP", userAge: "25", userHeight: "120", userWeight: "67.7", userLimit: "1200", idealWeight: "60", gender: true)
+//
+//
+//
+//    }
+    
+//    @objc func setUpProgress(){
+//        progressValue = progressValue + 0.01
+//        self.dayProgress.progress = Float(progressValue)
+//        if progressValue != 1.0 {
+//           self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
+//
+//
+//        }
+//    }
+    
+    func setUpProgress() {
+        let progressAmount = (dailyAmount / userCaloryLimit)
+        let b = Float(progressAmount)
+        let percentage = b * 100
+        let percentString = String(format: "You are %.1f", percentage)
+        let continued = "% from reaching your limit"
+        dayProgress.progress = b
+        progressLabel.text = percentString + continued
+    }
+    
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
         
     }
-
+    
 }
