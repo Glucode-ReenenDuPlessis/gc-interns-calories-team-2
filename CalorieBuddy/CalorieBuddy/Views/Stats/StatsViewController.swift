@@ -25,7 +25,7 @@ class StatsViewController: UICollectionViewController ,UICollectionViewDelegateF
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
-        setupBackgroundView()
+//        setupBackgroundView()
     }
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -81,8 +81,12 @@ extension StatsViewController{
         collectionView.register(FoodItemViewCell.self, forCellWithReuseIdentifier: foodItemId)
     }
     
+
+    
 }
  
+
+
 
 struct ViewController_Previews: PreviewProvider {
     static var previews: some View {

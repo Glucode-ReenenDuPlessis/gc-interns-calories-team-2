@@ -184,7 +184,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,7 +358,7 @@
         <!--Navigation Controller-->
         <scene sceneID="llZ-Ck-mLw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BBH-el-F8w" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navSearch" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BBH-el-F8w" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Ra-zD-GRj">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -376,7 +376,7 @@
         <!--Profile View Controller-->
         <scene sceneID="Gcb-Xb-aPj">
             <objects>
-                <viewController id="CIl-Dx-Gwc" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="CIl-Dx-Gwc" customClass="ProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E38-bS-XvT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

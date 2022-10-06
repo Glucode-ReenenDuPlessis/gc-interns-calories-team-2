@@ -8,6 +8,13 @@
 import UIKit
 
 class FoodItemViewCell: UICollectionViewCell {
+    var foodItem: FoodItem? {
+        didSet{
+            guard let unwrappedItem = foodItem else {return}
+            titleText.text = unwrappedItem.foodName
+            subText.text = unwrappedItem.category
+        }
+    }
     
     var titleText: UILabel = {
         var text = UILabel()
@@ -29,5 +36,11 @@ class FoodItemViewCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    func setupLayout(){
+        let bottomTextControner = UIView()
+        bottomTextControner.translatesAutoresizingMaskIntoConstraints = false
     }
 }

@@ -85,9 +85,10 @@ class NutritionViewCell: UICollectionViewCell {
         trackLayer.path = circularPath.cgPath
         
         //add stroke to the circle
-        trackLayer.strokeColor = UIColor.label.cgColor
+        trackLayer.strokeColor = UIColor.label.withAlphaComponent(0.2).cgColor
         trackLayer.lineWidth = 10
         trackLayer.fillColor = UIColor.clear.cgColor
+        
         //line cap
         greenView.layer.addSublayer(trackLayer)
 
@@ -96,19 +97,14 @@ class NutritionViewCell: UICollectionViewCell {
         shapeLayer.path = circularPath.cgPath
         
         //add stroke to the circle
-        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.strokeColor = UIColor.systemYellow.cgColor
         shapeLayer.lineWidth = 10
         shapeLayer.strokeEnd = 0
         shapeLayer.fillColor = UIColor.clear.cgColor
         //line cap
         shapeLayer.lineCap = CAShapeLayerLineCap.round
         
-        
         greenView.layer.addSublayer(shapeLayer)
-        
-        
-        
-        
         
         //tap gesture
         greenView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))

@@ -24,8 +24,8 @@ class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UIC
         super.init(frame: frame)
         setupViews()
         setWeekView()
-        
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -40,8 +40,6 @@ class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UIC
         appsCollectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
         appsCollectionView.register(AppCell.self, forCellWithReuseIdentifier: "cell")
         addSubview(appsCollectionView)
-        
-
     }
     
     func setWeekView()
@@ -70,6 +68,26 @@ class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UIC
         cell.numberTextView.text = String(CalendarHelper().dayOfMonth(date: date))
         cell.layer.cornerRadius = 20
         cell.backgroundColor = .systemGray
+        //Selected date
+        
+        cell.numberTextView.text = String(CalendarHelper().dayOfMonth(date: date))
+        
+        if(date == selectedDate)
+        {
+            cell.backgroundColor = UIColor.black
+            cell.numberTextView.textColor = UIColor.white
+            cell.backgroundView?.frame = CGRect(x: 20, y: 20, width: 20, height: 20)
+            cell.layer.cornerRadius = 15   
+        }
+        else
+        {
+            cell.backgroundColor = UIColor.white
+            cell.numberTextView.textColor = .init(UIColor.black)
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 0.2
+            cell.layer.shadowOffset = .init(width: 1, height: 2)
+            cell.layer.shadowRadius = 0.5
+        }
         return cell
     }
     
@@ -81,8 +99,8 @@ class DatePickerViewCell:  UICollectionViewCell, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedDate = totalSquares[indexPath.item]
+        collectionView.reloadData()
         print("\(selectedDate)")
-        
     }
 }
 
