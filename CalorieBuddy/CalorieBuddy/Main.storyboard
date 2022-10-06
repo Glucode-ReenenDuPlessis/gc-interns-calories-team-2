@@ -545,7 +545,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="UV5-K3-bC9">
             <objects>
-                <viewController title="Edit Profile View Controller" id="lJh-Ih-zLa" customClass="EditViewController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showDetail" title="Edit Profile View Controller" id="lJh-Ih-zLa" customClass="EditViewController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YRg-3H-RZr" customClass="EditView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -742,7 +742,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KmS-3l-RAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
 
+
             <point key="canvasLocation" x="1841.5384615384614" y="-772.03791469194312"/>
+
 
 
         </scene>
