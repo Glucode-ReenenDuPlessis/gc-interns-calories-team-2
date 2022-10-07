@@ -18,6 +18,9 @@ class RecommendationController: UIViewController {
     
     private let sectionTypes: [Test] = [.headerSection, .bodySection]
     private let sections = MockData.shared.pageData
+    private let dp = DataProvider()
+    
+    let categories = ["Asian", "Traditional Tai", "Japanese", "Korean", "Indian", "African"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +67,14 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections[section].count    }
+        switch self.sectionTypes[section] {
+        case .headerSection:
+            return sections[section].count
+            
+        case .bodySection:
+            return sections[section].count
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch sectionTypes[indexPath.section] {

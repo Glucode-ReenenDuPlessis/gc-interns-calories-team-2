@@ -54,9 +54,9 @@ class ProfileViewController: UIViewController {
         setUpProgress()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        users = dbh.getUserInfo()
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     
     func setUpView() {
         
