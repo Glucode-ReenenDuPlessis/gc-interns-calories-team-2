@@ -153,10 +153,7 @@ extension StatsViewController{
             self.collectionViewLayout.invalidateLayout()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.reloadData()
-        
-    }
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if eventsForDate(date: selectedDate).count == 0{
             return 4
