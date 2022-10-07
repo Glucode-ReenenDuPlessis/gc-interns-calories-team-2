@@ -33,10 +33,7 @@ class ProfileViewController: UIViewController {
     var userCaloryLimit = Double()
     var dailyAmount: Double = 1000
     
-    var users: [User] {
-        let data = dbh.getUserInfo()
-        return data
-    }
+    var users: [User] = []
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let dbh = DatabaseHandler()
@@ -50,13 +47,15 @@ class ProfileViewController: UIViewController {
 //        heightLabel.text = finalHeight
 //        idealWeightLabel.text = ID
 //        limitLabel.text = finalLimit
+        users = dbh.getUserInfo()
         setUpView()
         setUpProgress()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        users = dbh.getUserInfo()
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        users = dbh.getUserInfo()
+        setUpView()
+    }
     
     func setUpView() {
         

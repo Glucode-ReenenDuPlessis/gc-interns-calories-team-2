@@ -315,7 +315,10 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="159" height="222"/>
                                         <connections>
+                                            <outlet property="foodImage" destination="5oF-Bq-L89" id="INl-ai-wkN"/>
                                             <outlet property="foodView" destination="0x7-3K-1pp" id="aTZ-jy-7UE"/>
+                                            <outlet property="subTitleLable" destination="FRC-CP-lqZ" id="X2j-Cm-wYT"/>
+                                            <outlet property="titleLable" destination="uC8-Vr-tGn" id="cPU-bI-PNf"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

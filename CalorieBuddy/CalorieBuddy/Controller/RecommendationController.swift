@@ -12,6 +12,7 @@ class RecommendationController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let categories = ["Asian", "Traditional Tai", "Japanese", "Korean", "Indian", "African"]
+    let subTitle = ["12 Receps", "32 Receps", "78 Receps", "13 Receps", "45 Receps", "54 Receps"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +46,15 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! BodyCollectionViewCell
-            cell.setUpContent()
+        let item = categories[indexPath.row]
+        let subTitleItem = subTitle[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! BodyCollectionViewCell
+        cell.setUpView()
+        cell.setUpContent(title: item, subTitle: subTitleItem)
             return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }
