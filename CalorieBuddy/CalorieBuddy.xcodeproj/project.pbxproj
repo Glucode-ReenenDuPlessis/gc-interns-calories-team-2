@@ -18,6 +18,14 @@
 		435EBBD828E591FB004A7296 /* NutritionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBD728E591FB004A7296 /* NutritionViewCell.swift */; };
 		435EBBDA28E6D104004A7296 /* FoodItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBD928E6D104004A7296 /* FoodItemViewCell.swift */; };
 		435EBBDC28E6D225004A7296 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EBBDB28E6D225004A7296 /* Extensions.swift */; };
+		4360880A28F0626D00EED8D9 /* DetailViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4360880828F0626D00EED8D9 /* DetailViewComponent.swift */; };
+		4360880B28F0626D00EED8D9 /* DetailViewComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4360880928F0626D00EED8D9 /* DetailViewComponent.xib */; };
+		4360881128F062C500EED8D9 /* homeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4360880F28F062C500EED8D9 /* homeComponent.swift */; };
+		4360881228F062C500EED8D9 /* homeComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4360881028F062C500EED8D9 /* homeComponent.xib */; };
+		4360881428F062CF00EED8D9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4360881328F062CF00EED8D9 /* UIView+Extension.swift */; };
+		4360881728F062D500EED8D9 /* testingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4360881528F062D500EED8D9 /* testingViewController.xib */; };
+		4360881828F062D500EED8D9 /* testingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4360881628F062D500EED8D9 /* testingViewController.swift */; };
+		4360881A28F0683800EED8D9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4360881928F0683800EED8D9 /* TableViewController.swift */; };
 		436232BB28E2FE7100B41DB3 /* CalorieBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436232B928E2FE7000B41DB3 /* CalorieBuddy.xcdatamodeld */; };
 		437DAC2228E4554E0034D810 /* DatePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DAC2128E4554E0034D810 /* DatePickerViewCell.swift */; };
 		43B997D328DC605D007A431F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B997D228DC605D007A431F /* AppDelegate.swift */; };
@@ -69,6 +77,14 @@
 		435EBBD728E591FB004A7296 /* NutritionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewCell.swift; sourceTree = "<group>"; };
 		435EBBD928E6D104004A7296 /* FoodItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemViewCell.swift; sourceTree = "<group>"; };
 		435EBBDB28E6D225004A7296 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4360880828F0626D00EED8D9 /* DetailViewComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewComponent.swift; sourceTree = "<group>"; };
+		4360880928F0626D00EED8D9 /* DetailViewComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewComponent.xib; sourceTree = "<group>"; };
+		4360880F28F062C500EED8D9 /* homeComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeComponent.swift; sourceTree = "<group>"; };
+		4360881028F062C500EED8D9 /* homeComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeComponent.xib; sourceTree = "<group>"; };
+		4360881328F062CF00EED8D9 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4360881528F062D500EED8D9 /* testingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testingViewController.xib; sourceTree = "<group>"; };
+		4360881628F062D500EED8D9 /* testingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testingViewController.swift; sourceTree = "<group>"; };
+		4360881928F0683800EED8D9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		436232BA28E2FE7100B41DB3 /* CalorieBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalorieBuddy.xcdatamodel; sourceTree = "<group>"; };
 		437DAC2128E4554E0034D810 /* DatePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewCell.swift; sourceTree = "<group>"; };
 		43B997CF28DC605D007A431F /* CalorieBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +160,24 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		4360880D28F0629F00EED8D9 /* Detail View Bronson */ = {
+			isa = PBXGroup;
+			children = (
+				4360880828F0626D00EED8D9 /* DetailViewComponent.swift */,
+				4360880928F0626D00EED8D9 /* DetailViewComponent.xib */,
+			);
+			path = "Detail View Bronson";
+			sourceTree = "<group>";
+		};
+		4360880E28F062B700EED8D9 /* Home Components */ = {
+			isa = PBXGroup;
+			children = (
+				4360880F28F062C500EED8D9 /* homeComponent.swift */,
+				4360881028F062C500EED8D9 /* homeComponent.xib */,
+			);
+			path = "Home Components";
+			sourceTree = "<group>";
+		};
 		43B997C628DC605D007A431F = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +203,10 @@
 		43B997D128DC605D007A431F /* CalorieBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				4360881628F062D500EED8D9 /* testingViewController.swift */,
+				4360881528F062D500EED8D9 /* testingViewController.xib */,
+				4360880E28F062B700EED8D9 /* Home Components */,
+				4360880D28F0629F00EED8D9 /* Detail View Bronson */,
 				43EF6C6428E42CDA00914C44 /* Views */,
 				436232B928E2FE7000B41DB3 /* CalorieBuddy.xcdatamodeld */,
 				CF00296E28EC654B004C0033 /* Detail View */,
@@ -209,6 +247,7 @@
 		5C147F9E28E2F753008008FC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4360881328F062CF00EED8D9 /* UIView+Extension.swift */,
 				4C811C1128EEDD3F0024FDA2 /* LayoutViewController.swift */,
 				435EBBB528E4C8CE004A7296 /* CalendarHelper.swift */,
 				5C147F9C28E2F747008008FC /* UIImageView.swift */,
@@ -248,6 +287,7 @@
 				5C6B7E0328EAB0B5008AC2C8 /* EditNumberFieldView.xib */,
 				5C71698B28EDC91800E4F7BB /* BodyCollectionViewCell.swift */,
 				5C71698D28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift */,
+				4360881928F0683800EED8D9 /* TableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,13 +359,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4360881228F062C500EED8D9 /* homeComponent.xib in Resources */,
 				5C147FA128E2F77A008008FC /* FoodItemCell.xib in Resources */,
+				4360880B28F0626D00EED8D9 /* DetailViewComponent.xib in Resources */,
 				5C6B7DEA28E6BF40008AC2C8 /* CategoryPickerView.xib in Resources */,
 				43B997DF28DC6060007A431F /* LaunchScreen.storyboard in Resources */,
 				5C6B7E0428EAB0B5008AC2C8 /* EditNumberFieldView.xib in Resources */,
 				43B997DC28DC6060007A431F /* Assets.xcassets in Resources */,
 				5C6B7DFE28E71215008AC2C8 /* EditTextFieldView.xib in Resources */,
 				5C147FAB28E2F900008008FC /* Main.storyboard in Resources */,
+				4360881728F062D500EED8D9 /* testingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +401,8 @@
 				5C6B7DFC28E71208008AC2C8 /* EditTextFieldView.swift in Sources */,
 				5C71699628EE8EE300E4F7BB /* Mock Data.swift in Sources */,
 				5C147FA528E2F7A8008008FC /* Food.swift in Sources */,
+				4360881428F062CF00EED8D9 /* UIView+Extension.swift in Sources */,
+				4360881A28F0683800EED8D9 /* TableViewController.swift in Sources */,
 				5CF7C19A28E4672A00B84361 /* EditViewController.swift in Sources */,
 				5C6B7E0228EAB099008AC2C8 /* EditNumberFieldView.swift in Sources */,
 				4C811C1228EEDD3F0024FDA2 /* LayoutViewController.swift in Sources */,
@@ -370,13 +415,16 @@
 				43305BC628EE1683009128A2 /* CustomTabBarVC.swift in Sources */,
 				4350345A28EF9296009F25F9 /* SwippingController.swift in Sources */,
 				43EF6C6728E42CF200914C44 /* StatsViewController.swift in Sources */,
+				4360881828F062D500EED8D9 /* testingViewController.swift in Sources */,
 				4350345C28EF9296009F25F9 /* Page.swift in Sources */,
 				43305BC428EDDEC6009128A2 /* TabBarVC.swift in Sources */,
+				4360881128F062C500EED8D9 /* homeComponent.swift in Sources */,
 				4350345328EF8F5C009F25F9 /* TabBarStoryBoardVC.swift in Sources */,
 				435EBBB628E4C8CE004A7296 /* CalendarHelper.swift in Sources */,
 				5C71698E28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift in Sources */,
 				5C71698C28EDC91800E4F7BB /* BodyCollectionViewCell.swift in Sources */,
 				5C3E5CF828ED7B2900BA3A84 /* RecommendationController.swift in Sources */,
+				4360880A28F0626D00EED8D9 /* DetailViewComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

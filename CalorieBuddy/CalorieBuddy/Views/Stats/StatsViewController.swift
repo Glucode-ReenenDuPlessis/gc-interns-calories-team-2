@@ -148,6 +148,10 @@ extension StatsViewController{
 
 //collection view controls
 extension StatsViewController{
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        //this will invalidate the collection view layout so it knows how to draw itself
+            self.collectionViewLayout.invalidateLayout()
+    }
     
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
