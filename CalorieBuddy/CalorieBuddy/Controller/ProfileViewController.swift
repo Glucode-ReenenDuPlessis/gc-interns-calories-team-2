@@ -40,13 +40,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
         
-//        nameLabel.text = finalName
-//        weightLabel.text = finalWeight
-//        heightLabel.text = finalHeight
-//        idealWeightLabel.text = ID
-//        limitLabel.text = finalLimit
         users = dbh.getUserInfo()
         setUpView()
         setUpProgress()
@@ -70,25 +64,6 @@ class ProfileViewController: UIViewController {
             
         }
     }
-    
-//
-//    @IBAction func addInfoPressed(_ sender: UIButton) {
-//
-//        //        dbh.addUser(userName: "OP", userAge: "25", userHeight: "120", userWeight: "67.7", userLimit: "1200", idealWeight: "60", gender: true)
-//
-//
-//
-//    }
-    
-//    @objc func setUpProgress(){
-//        progressValue = progressValue + 0.01
-//        self.dayProgress.progress = Float(progressValue)
-//        if progressValue != 1.0 {
-//           self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
-//
-//
-//        }
-//    }
     
     func setUpProgress() {
         let progressAmount = (dailyAmount / userCaloryLimit)
