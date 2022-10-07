@@ -12,10 +12,10 @@ class HeaderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var titleText: UILabel!
     
-    func setUpView(_ item: ListItem) {
+    func setUpView() {
         titleView.layer.cornerRadius = titleView.frame.size.height / 10
         titleView.backgroundColor = .cyan
         
-        titleText.text = item.title
+//        titleText.text = item.title
     }
 }

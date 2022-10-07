@@ -32,6 +32,6 @@ struct MockData {
     }()
     
     var pageData: [ListSection] {
-        [body]
+        [body, header]
     }
 }
