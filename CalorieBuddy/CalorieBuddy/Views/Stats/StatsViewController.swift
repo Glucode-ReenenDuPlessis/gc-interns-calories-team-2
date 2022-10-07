@@ -149,16 +149,12 @@ extension StatsViewController{
 //collection view controls
 extension StatsViewController{
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.reloadData()
-        
-    }
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if eventsForDate(date: selectedDate).count == 0{
             return 4
         }else{
             return 3+eventsForDate(date: selectedDate).count
-            collectionView.reloadData()
         }
     }
     
@@ -179,7 +175,6 @@ extension StatsViewController{
             if eventsForDate(date: selectedDate).count == 0{
                 calories = 0.0
             }else{
-                collectionView.reloadData()
                 calories = eventsForDate(date: selectedDate)[itemContent].calorie
             }
             
@@ -196,7 +191,6 @@ extension StatsViewController{
                 cell.subText.text = "Go search and add some items"
                 return cell
             }else{
-                collectionView.reloadData()
                 let datedItem = eventsForDate(date: selectedDate)[itemContent]
                 cell.foodItem = datedItem
                 return cell
