@@ -346,10 +346,10 @@
             </objects>
             <point key="canvasLocation" x="1847.6923076923076" y="11.374407582938389"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="cQO-Tw-cEK">
             <objects>
-                <viewController id="FOn-jh-bZV" sceneMemberID="viewController">
+                <viewController id="FOn-jh-bZV" customClass="TableViewController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cP0-mn-PjT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
