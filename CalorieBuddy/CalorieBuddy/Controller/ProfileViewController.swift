@@ -33,30 +33,23 @@ class ProfileViewController: UIViewController {
     var userCaloryLimit = Double()
     var dailyAmount: Double = 1000
     
-    var users: [User] {
-        let data = dbh.getUserInfo()
-        return data
-    }
+    var users: [User] = []
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let dbh = DatabaseHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
         
-//        nameLabel.text = finalName
-//        weightLabel.text = finalWeight
-//        heightLabel.text = finalHeight
-//        idealWeightLabel.text = ID
-//        limitLabel.text = finalLimit
+        users = dbh.getUserInfo()
         setUpView()
         setUpProgress()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        users = dbh.getUserInfo()
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        users = dbh.getUserInfo()
+        setUpView()
+    }
     
     func setUpView() {
         
@@ -71,25 +64,6 @@ class ProfileViewController: UIViewController {
             
         }
     }
-    
-//
-//    @IBAction func addInfoPressed(_ sender: UIButton) {
-//
-//        //        dbh.addUser(userName: "OP", userAge: "25", userHeight: "120", userWeight: "67.7", userLimit: "1200", idealWeight: "60", gender: true)
-//
-//
-//
-//    }
-    
-//    @objc func setUpProgress(){
-//        progressValue = progressValue + 0.01
-//        self.dayProgress.progress = Float(progressValue)
-//        if progressValue != 1.0 {
-//           self.perform(#selector(setUpProgress), with: nil, afterDelay: 0.4)
-//
-//
-//        }
-//    }
     
     func setUpProgress() {
         let progressAmount = (dailyAmount / userCaloryLimit)

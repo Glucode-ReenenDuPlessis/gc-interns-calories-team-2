@@ -57,6 +57,7 @@
 		5C6B7DFE28E71215008AC2C8 /* EditTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7DFD28E71215008AC2C8 /* EditTextFieldView.xib */; };
 		5C6B7E0228EAB099008AC2C8 /* EditNumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7E0128EAB099008AC2C8 /* EditNumberFieldView.swift */; };
 		5C6B7E0428EAB0B5008AC2C8 /* EditNumberFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7E0328EAB0B5008AC2C8 /* EditNumberFieldView.xib */; };
+		5C6C557228F0636A0055453A /* FoodRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C557128F0636A0055453A /* FoodRecipe.swift */; };
 		5C71698C28EDC91800E4F7BB /* BodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71698B28EDC91800E4F7BB /* BodyCollectionViewCell.swift */; };
 		5C71698E28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71698D28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift */; };
 		5C71699628EE8EE300E4F7BB /* Mock Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C71699528EE8EE300E4F7BB /* Mock Data.swift */; };
@@ -116,6 +117,7 @@
 		5C6B7DFD28E71215008AC2C8 /* EditTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTextFieldView.xib; sourceTree = "<group>"; };
 		5C6B7E0128EAB099008AC2C8 /* EditNumberFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNumberFieldView.swift; sourceTree = "<group>"; };
 		5C6B7E0328EAB0B5008AC2C8 /* EditNumberFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditNumberFieldView.xib; sourceTree = "<group>"; };
+		5C6C557128F0636A0055453A /* FoodRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipe.swift; sourceTree = "<group>"; };
 		5C71698B28EDC91800E4F7BB /* BodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C71698D28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C71698F28EE8C9500E4F7BB /* ListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItems.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				5C71698F28EE8C9500E4F7BB /* ListItems.swift */,
 				5C71699128EE8D0000E4F7BB /* ListSection.swift */,
 				5C71699528EE8EE300E4F7BB /* Mock Data.swift */,
+				5C6C557128F0636A0055453A /* FoodRecipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				4360881428F062CF00EED8D9 /* UIView+Extension.swift in Sources */,
 				4360881A28F0683800EED8D9 /* TableViewController.swift in Sources */,
 				5CF7C19A28E4672A00B84361 /* EditViewController.swift in Sources */,
+				5C6C557228F0636A0055453A /* FoodRecipe.swift in Sources */,
 				5C6B7E0228EAB099008AC2C8 /* EditNumberFieldView.swift in Sources */,
 				4C811C1228EEDD3F0024FDA2 /* LayoutViewController.swift in Sources */,
 				5CF7C19828E42D1B00B84361 /* DatabaseHandler.swift in Sources */,
