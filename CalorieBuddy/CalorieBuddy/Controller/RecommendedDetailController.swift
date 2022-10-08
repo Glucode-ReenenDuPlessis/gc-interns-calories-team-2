@@ -48,9 +48,14 @@ class RecommendedDetailController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let foodRecipes = dp.foodRecipe?.hits[tableView.indexPathForSelectedRow!.row]
+        performSegue(withIdentifier: "recipeDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? RecommendedRecipeDetailController {
+            destination.foodHit = dp.foodRecipe?.hits[tableView.indexPathForSelectedRow!.row]
+        }
         
-        print(foodRecipes?.recipe.ingredients)
     }
 
 }

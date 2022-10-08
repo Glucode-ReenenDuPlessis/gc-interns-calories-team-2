@@ -378,20 +378,31 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="xQh-7C-jOQ"/>
                     <connections>
-                        <segue destination="zbd-1c-7op" kind="show" id="Xbt-2O-tMP"/>
+                        <segue destination="zbd-1c-7op" kind="show" identifier="recipeDetail" id="Xbt-2O-tMP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPf-48-pdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2786" y="11"/>
         </scene>
-        <!--View Controller-->
+        <!--Recommended Recipe Detail Controller-->
         <scene sceneID="n8A-PK-yoZ">
             <objects>
-                <viewController id="zbd-1c-7op" sceneMemberID="viewController">
+                <viewController id="zbd-1c-7op" customClass="RecommendedRecipeDetailController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GBh-G4-Lm2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpO-La-oo7">
+                                <rect key="frame" x="158" y="376" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="testButtonPressed:" destination="zbd-1c-7op" eventType="touchUpInside" id="n5u-L4-ond"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2bf-8k-Q0q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
