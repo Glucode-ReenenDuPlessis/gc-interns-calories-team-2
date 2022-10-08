@@ -47,6 +47,7 @@
 		5C147FAB28E2F900008008FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C147FAA28E2F900008008FC /* Main.storyboard */; };
 		5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAC28E2F935008008FC /* DetailViewController.swift */; };
 		5C147FAF28E2F935008008FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAD28E2F935008008FC /* ViewController.swift */; };
+		5C2E138528F087E4005AE8EF /* RecommendedDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E138428F087E4005AE8EF /* RecommendedDetailController.swift */; };
 		5C3E5CF828ED7B2900BA3A84 /* RecommendationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E5CF728ED7B2900BA3A84 /* RecommendationController.swift */; };
 		5C6B7DE828E6BF34008AC2C8 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE728E6BF34008AC2C8 /* CategoryPickerView.swift */; };
 		5C6B7DEA28E6BF40008AC2C8 /* CategoryPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE928E6BF40008AC2C8 /* CategoryPickerView.xib */; };
@@ -104,6 +105,7 @@
 		5C147FAA28E2F900008008FC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5C147FAC28E2F935008008FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5C147FAD28E2F935008008FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C2E138428F087E4005AE8EF /* RecommendedDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedDetailController.swift; sourceTree = "<group>"; };
 		5C3E5CF728ED7B2900BA3A84 /* RecommendationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationController.swift; sourceTree = "<group>"; };
 		5C6B7DE728E6BF34008AC2C8 /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 		5C6B7DE928E6BF40008AC2C8 /* CategoryPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryPickerView.xib; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				5C71698B28EDC91800E4F7BB /* BodyCollectionViewCell.swift */,
 				5C71698D28EDCBF600E4F7BB /* HeaderCollectionViewCell.swift */,
 				4360881928F0683800EED8D9 /* TableViewController.swift */,
+				5C2E138428F087E4005AE8EF /* RecommendedDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				5C6B7DF428E6C551008AC2C8 /* FoodItem+CoreDataProperties.swift in Sources */,
 				5C6B7DF528E6C551008AC2C8 /* Meal+CoreDataClass.swift in Sources */,
 				5C147FAE28E2F935008008FC /* DetailViewController.swift in Sources */,
+				5C2E138528F087E4005AE8EF /* RecommendedDetailController.swift in Sources */,
 				43305BC628EE1683009128A2 /* CustomTabBarVC.swift in Sources */,
 				4350345A28EF9296009F25F9 /* SwippingController.swift in Sources */,
 				43EF6C6728E42CF200914C44 /* StatsViewController.swift in Sources */,

@@ -346,11 +346,41 @@
                     <navigationItem key="navigationItem" id="TjP-vd-YqQ"/>
                     <connections>
                         <outlet property="collectionView" destination="vOP-SR-euw" id="0sw-tJ-dpL"/>
+                        <segue destination="HvQ-LW-AUG" kind="show" identifier="RecommendedDetailController" id="sX2-fF-VTT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pvH-V0-QVN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1847.6923076923076" y="11.374407582938389"/>
+        </scene>
+        <!--Recommended Detail Controller-->
+        <scene sceneID="gSI-Yc-QCL">
+            <objects>
+                <tableViewController id="HvQ-LW-AUG" customClass="RecommendedDetailController" customModule="CalorieBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IZB-Xq-AbT">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PsI-Bq-nNY">
+                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PsI-Bq-nNY" id="OSl-Ap-Jz4">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HvQ-LW-AUG" id="ofW-Fm-zNb"/>
+                            <outlet property="delegate" destination="HvQ-LW-AUG" id="Dcj-Mi-NGq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xQh-7C-jOQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPf-48-pdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2786" y="11"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="cQO-Tw-cEK">

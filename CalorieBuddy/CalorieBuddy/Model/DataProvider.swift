@@ -13,6 +13,8 @@ class DataProvider {
     var foods: Food? = nil
     var foodRecipe: FoodRecipe? = nil
     
+//    var foodSearchText:
+    
     let userText: String = "chicken"
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

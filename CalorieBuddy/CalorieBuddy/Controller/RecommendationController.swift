@@ -14,6 +14,7 @@ class RecommendationController: UIViewController {
     let categories = ["Asian", "Traditional Tai", "Japanese", "Korean", "Indian", "African"]
     let subTitle = ["12 Receps", "32 Receps", "78 Receps", "13 Receps", "45 Receps", "54 Receps"]
     let dp = DataProvider()
+    var categoryTitle: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,18 +57,15 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = categories[indexPath.row]
-        print(item)
-        
-        dp.parseSearchJSON(getFood: item) { [self] in
-            
-            if let foodArray = dp.foodRecipe {
-                
-                for foodItem in foodArray.hits {
-                    print("---------------------------")
-                    print(foodItem.recipe.ingredientLines)
-                }
-            }
+        categoryTitle = categories[indexPath.row]
+        print(categoryTitle)
+        performSegue(withIdentifier: "RecommendedDetailController", sender: self)
+
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? RecommendedDetailController {
+            destination.categoryTitle = categoryTitle
         }
     }
 }
