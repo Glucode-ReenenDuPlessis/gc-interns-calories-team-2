@@ -46,5 +46,11 @@ class RecommendedDetailController: UITableViewController {
         cell.setUpCell(foodName: (food?.recipe.label)!, pic: food?.recipe.image, calory: food?.recipe.calories ?? 0, serving: "serving")
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let foodRecipes = dp.foodRecipe?.hits[tableView.indexPathForSelectedRow!.row]
+        
+        print(foodRecipes?.recipe.ingredients)
+    }
 
 }

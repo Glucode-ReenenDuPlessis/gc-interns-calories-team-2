@@ -11,7 +11,7 @@ class RecommendationController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let categories = ["Asian", "Traditional Tai", "Japanese", "Korean", "Indian", "African"]
+    let categories = ["Pasta", "Traditional Tai", "Japanese", "Korean", "Indian", "African"]
     let subTitle = ["12 Receps", "32 Receps", "78 Receps", "13 Receps", "45 Receps", "54 Receps"]
     let dp = DataProvider()
     var categoryTitle: String?

@@ -66,7 +66,7 @@ class DataProvider {
         let trimmedUrl = getFood.trimmingCharacters(in: .whitespacesAndNewlines)
         
         
-        let url = URL(string: "https://api.edamam.com/api/recipes/v2?type=public&app_id=bdad30ce&app_key=acc65bec841891df4ae486e1bdd50cdf&q=pasta")
+        let url = URL(string: "https://api.edamam.com/api/recipes/v2?type=public&app_id=bdad30ce&app_key=acc65bec841891df4ae486e1bdd50cdf&q=\(trimmedUrl)")
         
         URLSession.shared.dataTask(with: url!) { [self] data, response, error in
             

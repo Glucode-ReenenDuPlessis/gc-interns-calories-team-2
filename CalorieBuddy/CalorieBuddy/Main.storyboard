@@ -377,10 +377,29 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xQh-7C-jOQ"/>
+                    <connections>
+                        <segue destination="zbd-1c-7op" kind="show" id="Xbt-2O-tMP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPf-48-pdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2786" y="11"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="n8A-PK-yoZ">
+            <objects>
+                <viewController id="zbd-1c-7op" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GBh-G4-Lm2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2bf-8k-Q0q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cXO-7f-0b1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erO-6O-iyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3738" y="34"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="cQO-Tw-cEK">
