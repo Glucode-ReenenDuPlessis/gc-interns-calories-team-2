@@ -11,6 +11,12 @@ class RecommendedRecipeDetailController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var foodNameLabel: UILabel!
+    
+    @IBOutlet weak var foodImage: UIImageView!
+    
+    @IBOutlet weak var ingredientLabel: UILabel!
+    
     var foodHit: Hit?
     var ingredients: [Ingredient]?
 
@@ -18,6 +24,9 @@ class RecommendedRecipeDetailController: UIViewController {
         super.viewDidLoad()
         
         ingredients = foodHit?.recipe.ingredients
+        
+        foodNameLabel.text = (foodHit?.recipe.label)!
+        foodImage.loadImage(fromURL: (foodHit?.recipe.image)!)
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "foodItemCell")
     }
 
