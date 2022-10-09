@@ -11,8 +11,9 @@ class RecommendationController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let categories = ["Pasta", "Traditional Tai", "Japanese", "Korean", "Indian", "African"]
+    let categories = ["Pasta", "Pizza", "Fish", "Chicken", "Meat", "Salad"]
     let subTitle = ["12 Receps", "32 Receps", "78 Receps", "13 Receps", "45 Receps", "54 Receps"]
+    let images = ["pasta.png", "pizza.png", "fish.png", "chicken.png", "steak.png", "salad.png"]
     let dp = DataProvider()
     var categoryTitle: String?
 
@@ -50,9 +51,11 @@ extension RecommendationController: UICollectionViewDelegate, UICollectionViewDa
         
         let item = categories[indexPath.row]
         let subTitleItem = subTitle[indexPath.row]
+        let image = images[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! BodyCollectionViewCell
         cell.setUpView()
         cell.setUpContent(title: item, subTitle: subTitleItem)
+        cell.foodImage.image = UIImage(named: image)
             return cell
     }
     
