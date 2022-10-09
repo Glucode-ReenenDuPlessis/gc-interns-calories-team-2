@@ -34,7 +34,7 @@ class FoodItemCell: UITableViewCell {
     func setUpCell(foodName:String, pic:String?, calory: Double, serving: String) {
         foodTitle.text = foodName
         
-        foodCalory.text = "Calories: \(calory)"
+        foodCalory.text = String(format: "Calories: %.2f", calory)
         
         if pic != nil{
             //            foodImg.downloaded(from:pic!)

@@ -26,8 +26,13 @@ class RecommendedRecipeDetailController: UIViewController {
         ingredients = foodHit?.recipe.ingredients
         
         foodNameLabel.text = (foodHit?.recipe.label)!
+        ingredientLabel.text = String(format: "%.2f Calories", (foodHit?.recipe.calories)!)
+        
+        foodImage.layer.cornerRadius = foodImage.frame.size.height / 15
+        foodImage.clipsToBounds = true
         foodImage.loadImage(fromURL: (foodHit?.recipe.image)!)
-        tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "foodItemCell")
+        
+        tableView.register(UINib(nibName: "RecommendationCell", bundle: nil), forCellReuseIdentifier: "RecommendationCell")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,8 +58,9 @@ extension RecommendedRecipeDetailController: UITableViewDelegate, UITableViewDat
         
         let ingredientItem = ingredients![indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodItemCell") as! FoodItemCell
-        cell.setUpCell(foodName: ingredientItem.text, pic: ingredientItem.image, calory: 0.0, serving: "")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendationCell") as! RecommendationCell
+        cell.viewSetup()
+        cell.setUpCell(foodName: ingredientItem.text, pic: ingredientItem.image)
         return cell
     }
     

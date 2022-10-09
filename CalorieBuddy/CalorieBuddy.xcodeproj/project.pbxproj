@@ -49,6 +49,8 @@
 		5C147FAF28E2F935008008FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C147FAD28E2F935008008FC /* ViewController.swift */; };
 		5C2E138528F087E4005AE8EF /* RecommendedDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E138428F087E4005AE8EF /* RecommendedDetailController.swift */; };
 		5C3E5CF828ED7B2900BA3A84 /* RecommendationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E5CF728ED7B2900BA3A84 /* RecommendationController.swift */; };
+		5C45C53528F2DD26000DA296 /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45C53328F2DD26000DA296 /* RecommendationCell.swift */; };
+		5C45C53628F2DD26000DA296 /* RecommendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C45C53428F2DD26000DA296 /* RecommendationCell.xib */; };
 		5C6B7DE828E6BF34008AC2C8 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE728E6BF34008AC2C8 /* CategoryPickerView.swift */; };
 		5C6B7DEA28E6BF40008AC2C8 /* CategoryPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6B7DE928E6BF40008AC2C8 /* CategoryPickerView.xib */; };
 		5C6B7DF428E6C551008AC2C8 /* FoodItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7DEE28E6C551008AC2C8 /* FoodItem+CoreDataProperties.swift */; };
@@ -108,6 +110,8 @@
 		5C147FAD28E2F935008008FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C2E138428F087E4005AE8EF /* RecommendedDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedDetailController.swift; sourceTree = "<group>"; };
 		5C3E5CF728ED7B2900BA3A84 /* RecommendationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationController.swift; sourceTree = "<group>"; };
+		5C45C53328F2DD26000DA296 /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
+		5C45C53428F2DD26000DA296 /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
 		5C6B7DE728E6BF34008AC2C8 /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 		5C6B7DE928E6BF40008AC2C8 /* CategoryPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryPickerView.xib; sourceTree = "<group>"; };
 		5C6B7DEB28E6C551008AC2C8 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -297,6 +301,8 @@
 				4360881928F0683800EED8D9 /* TableViewController.swift */,
 				5C2E138428F087E4005AE8EF /* RecommendedDetailController.swift */,
 				5C972CA228F1B4150091962E /* RecommendedRecipeDetailController.swift */,
+				5C45C53328F2DD26000DA296 /* RecommendationCell.swift */,
+				5C45C53428F2DD26000DA296 /* RecommendationCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 			files = (
 				4360881228F062C500EED8D9 /* homeComponent.xib in Resources */,
 				5C147FA128E2F77A008008FC /* FoodItemCell.xib in Resources */,
+				5C45C53628F2DD26000DA296 /* RecommendationCell.xib in Resources */,
 				4360880B28F0626D00EED8D9 /* DetailViewComponent.xib in Resources */,
 				5C6B7DEA28E6BF40008AC2C8 /* CategoryPickerView.xib in Resources */,
 				43B997DF28DC6060007A431F /* LaunchScreen.storyboard in Resources */,
@@ -396,6 +403,7 @@
 				5C147F9D28E2F747008008FC /* UIImageView.swift in Sources */,
 				5C147FA928E2F7C9008008FC /* DataProvider.swift in Sources */,
 				4C811C1628EEDF1A0024FDA2 /* FoodItem+CoreDataClass.swift in Sources */,
+				5C45C53528F2DD26000DA296 /* RecommendationCell.swift in Sources */,
 				5C147FA228E2F77A008008FC /* FoodItemCell.swift in Sources */,
 				4C811C1428EEDF060024FDA2 /* ListItems.swift in Sources */,
 				5C6B7DF628E6C551008AC2C8 /* Meal+CoreDataProperties.swift in Sources */,
