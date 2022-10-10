@@ -28,6 +28,7 @@ class RecommendedRecipeDetailController: UIViewController {
         foodNameLabel.text = (foodHit?.recipe.label)!
         ingredientLabel.text = String(format: "%.2f Calories", (foodHit?.recipe.calories)!)
         
+        foodImage.layer.masksToBounds = false
         foodImage.layer.cornerRadius = foodImage.frame.size.height / 15
         foodImage.clipsToBounds = true
         foodImage.loadImage(fromURL: (foodHit?.recipe.image)!)
@@ -41,11 +42,14 @@ class RecommendedRecipeDetailController: UIViewController {
     
     @IBAction func testButtonPressed(_ sender: UIButton) {
         
-//        let ingredients = foodHit?.recipe.ingredients
-//        for ingredient in ingredients!  {
-//            print("-------------------------")
-//            print(ingredient.text)
-//        }
+        performSegue(withIdentifier: "recipeToAdd", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController{
+            destination.itemName.text = (foodHit?.recipe.label)!
+            destination.itemsImageView.loadImage(fromURL: (foodHit?.recipe.image)!)
+        }
     }
 }
 
@@ -60,7 +64,13 @@ extension RecommendedRecipeDetailController: UITableViewDelegate, UITableViewDat
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendationCell") as! RecommendationCell
         cell.viewSetup()
-        cell.setUpCell(foodName: ingredientItem.text, pic: ingredientItem.image)
+        if ingredientItem.text == "Index 10" {
+            cell.setUpCell(foodName: "Error Fetching Data", pic: "")
+            return cell
+        } else {
+            cell.setUpCell(foodName: ingredientItem.text, pic: ingredientItem.image)
+            return cell
+        }
         return cell
     }
     

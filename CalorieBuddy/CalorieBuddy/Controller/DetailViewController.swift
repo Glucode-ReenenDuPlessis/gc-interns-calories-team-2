@@ -26,6 +26,7 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var picker: UIPickerView!
     let dp = DataProvider()
     var selectedFood:Hint?
+    var selectedRecipe: Hit?
     
     var pickerData = ["Breakfast","Lunch", "Supper"]
     var selectedCategory: String?

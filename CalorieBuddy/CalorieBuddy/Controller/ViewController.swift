@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var food: UITextField!
     let dp = DataProvider()
 //    let api = ApiManager()
+    let dbh = DatabaseHandler()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
         
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "foodItemCell")
         
-       
+        dbh.addUser(userName: "Sibusiso", userAge: "26", userHeight: "1.6", userWeight: "70", userLimit: "1500", idealWeight: "75", gender: true)
         
         dp.getAllItems()
      
