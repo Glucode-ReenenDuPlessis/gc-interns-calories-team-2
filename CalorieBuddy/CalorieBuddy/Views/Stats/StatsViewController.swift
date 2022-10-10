@@ -38,6 +38,10 @@ class StatsViewController: UICollectionViewController ,UICollectionViewDelegateF
         getAllItems()
         collectionView.reloadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical

@@ -31,28 +31,22 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nBS-Nq-evL">
-                                        <rect key="frame" x="70" y="2.3333333333333321" width="113.66666666666669" height="47.666666666666671"/>
+                                        <rect key="frame" x="70" y="2.3333333333333321" width="43.333333333333343" height="47.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBt-aU-Hfj">
-                                                <rect key="frame" x="0.0" y="0.0" width="113.66666666666667" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxD-kz-PjL">
-                                                <rect key="frame" x="0.0" y="28.333333333333329" width="113.66666666666667" height="19.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="28.333333333333329" width="43.333333333333336" height="19.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwx-Ua-fWS">
-                                        <rect key="frame" x="203.66666666666666" y="30.666666666666664" width="69.999999999999972" height="19.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hxD-kz-PjL" firstAttribute="leading" secondItem="y3T-AD-OJY" secondAttribute="trailing" constant="20" id="kwl-kL-QgC"/>
@@ -61,7 +55,6 @@
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jwx-Ua-fWS" secondAttribute="trailing" constant="2" id="Fh0-2k-hKe"/>
                             <constraint firstItem="C0G-Wj-74i" firstAttribute="top" secondItem="Wum-cG-EeI" secondAttribute="top" constant="1" id="WI4-A6-QIc"/>
                             <constraint firstAttribute="trailing" secondItem="C0G-Wj-74i" secondAttribute="trailing" constant="2" id="Yq2-fs-GOt"/>
                             <constraint firstItem="C0G-Wj-74i" firstAttribute="leading" secondItem="Wum-cG-EeI" secondAttribute="leading" constant="2" id="cge-0d-Wla"/>
@@ -82,7 +75,6 @@
                 <outlet property="foodImageView" destination="y3T-AD-OJY" id="XqB-Fb-3mC"/>
                 <outlet property="foodTitle" destination="yBt-aU-Hfj" id="FYf-Rg-H11"/>
                 <outlet property="foodView" destination="Wum-cG-EeI" id="c0t-2p-McY"/>
-                <outlet property="weightDescription" destination="jwx-Ua-fWS" id="Efo-hK-01D"/>
             </connections>
             <point key="canvasLocation" x="100" y="29.502369668246445"/>
         </tableViewCell>

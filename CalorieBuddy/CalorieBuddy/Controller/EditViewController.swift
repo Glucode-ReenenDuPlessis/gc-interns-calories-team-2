@@ -145,31 +145,17 @@ class EditViewController: UIViewController {
     }
 
 
-    @IBAction func CalculatePressed(_ sender: UIButton) {
+    @IBAction func saveTapped(_ sender: Any) {
         
         print(heightText?.text ?? "No text")
         print(weightText?.text ?? "No text")
         print(limitText?.text ?? "No text")
         print(ageText?.text ?? "No text")
         dbh.editUser(userAge: ageText!.text!, userHeight: heightText!.text!, userWeight: weightText!.text!, userLimit: limitText!.text!)
-//
-//      self.nameText = name.text!
-//      self.weightText = weight.text!
-//      self.heightText = height.text!
-//      self.idealWeightText = idealWeight.text!
-//      self.limitText = limit.text!
-//
-//      *  performSegue(withIdentifier: "showDetail", sender: self)
         
-        
-        
-        
-        
-        
-        //   dbh.addUser(userName: "Sbu", userAge: "24", userHeight: "561", userWeight: "70", userLimit: "1566", idealWeight: "67", gender: true)
-        
-       
+        self.navigationController?.popToRootViewController( animated: true)
     }
+    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        let vc = segue.destination as! ProfileViewController

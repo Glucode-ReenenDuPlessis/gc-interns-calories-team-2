@@ -47,8 +47,7 @@ class RecommendedRecipeDetailController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailViewController{
-            destination.itemName.text = (foodHit?.recipe.label)!
-            destination.itemsImageView.loadImage(fromURL: (foodHit?.recipe.image)!)
+            destination.selectedRecipe = foodHit
         }
     }
 }

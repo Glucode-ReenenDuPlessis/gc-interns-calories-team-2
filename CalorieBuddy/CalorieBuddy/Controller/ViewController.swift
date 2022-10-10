@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         dp.getAllItems()
      
         print(dp.models.count)
+        
+      //  dbh.addUser(userName: "Sthe", userAge: "23", userHeight: "1.67", userWeight: "90", userLimit: "1500", idealWeight: "85", gender: false)
     }
 
     @IBAction func getTapped(_ sender: UIButton) {

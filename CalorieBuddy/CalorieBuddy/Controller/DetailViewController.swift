@@ -37,18 +37,38 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if selectedFood?.food.image != nil{
-//           itemsImageView.downloaded(from:(selectedFood?.food.image!)!)
-            itemsImageView.loadImage(fromURL: selectedFood?.food.image! ?? "")
-        } else{
-            itemsImageView.image = UIImage(named: "restaurant.png")
+        
+        if selectedFood != nil{
+            if selectedFood?.food.image != nil{
+                //           itemsImageView.downloaded(from:(selectedFood?.food.image!)!)
+                itemsImageView.loadImage(fromURL: selectedFood?.food.image! ?? "")
+            } else{
+                itemsImageView.image = UIImage(named: "restaurant.png")
+            }
+            
+            itemName.text = selectedFood?.food.label
+            nutrientLabel1.text = "Calorie: \(selectedFood!.food.nutrients.ENERC_KCAL )"
+            
+            
+            servingsLabel.text = "\(servings ?? 1.0)"
+            
+        } else {
+            
+            if selectedRecipe?.recipe.image != nil{
+                //           itemsImageView.downloaded(from:(selectedFood?.food.image!)!)
+                itemsImageView.loadImage(fromURL: selectedRecipe?.recipe.image ?? "")
+            } else{
+                itemsImageView.image = UIImage(named: "restaurant.png")
+            }
+            
+            itemName.text = selectedRecipe?.recipe.label
+            nutrientLabel1.text = "Calorie: \(selectedRecipe?.recipe.calories ?? 0)"
+            
+            
+            servingsLabel.text = "\(servings ?? 0.0)"
         }
-       
-        itemName.text = selectedFood?.food.label
-        nutrientLabel1.text = "Calorie: \(selectedFood!.food.nutrients.ENERC_KCAL )"
-       
+        
         servings = 1
-        servingsLabel.text = "\(servings!)"
         self.picker.delegate = self
         self.picker.dataSource = self
         
