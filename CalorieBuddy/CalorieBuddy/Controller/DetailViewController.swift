@@ -85,6 +85,8 @@ class DetailViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         }catch{
           print("error saving")
         }
+        
+        self.navigationController?.popToRootViewController( animated: true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
