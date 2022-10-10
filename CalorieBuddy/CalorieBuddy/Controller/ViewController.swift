@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "foodItemCell")
         
-        dbh.addUser(userName: "Sibusiso", userAge: "26", userHeight: "1.6", userWeight: "70", userLimit: "1500", idealWeight: "75", gender: true)
-        
         dp.getAllItems()
      
         print(dp.models.count)

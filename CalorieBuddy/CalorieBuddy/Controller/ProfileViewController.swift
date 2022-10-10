@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
     var ID = ""
     var finalLimit: Double = 0.0
     var userCaloryLimit = Double()
-    var dailyAmount: Double = 1000
+    var dailyAmount: Double = 1100
     
     var users: [User] = []
     
